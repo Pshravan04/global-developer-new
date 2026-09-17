@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FNO Global Developers | Focused Nationwide Opportunities</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <!-- Global Wrapper -->
+    <main class="site-wrapper">
+
+    <!-- 01 PRELOADER -->
+    <div id="preloader" class="preloader">
+        <div class="preloader-content">
+            <h1 class="preloader-title">FNO</h1>
+            <p class="preloader-subtitle">Focused Nationwide Opportunities</p>
+            <div class="loader-line-container">
+                <div class="loader-line"></div>
+            </div>
+            <div class="loader-percentage">0%</div>
+        </div>
+    </div>
+
+    <!-- 02 HEADER -->
+    <header id="header" class="site-header">
+        <div class="header-inner">
+            <div class="header-left">
+                <a href="#" class="logo-link">
+                    <img src="FNO LOGO MAIN.png" alt="FNO Global Developers" class="nav-logo-img">
+                </a>
+            </div>
+            <nav class="header-nav">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#project">Upcoming Project</a></li>
+                    <li><a href="#destination">Decoding Land</a></li>
+                    <li><a href="#faq">FAQs</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-right">
+                <button class="pill-btn open-popup">Register Your Interest</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- 03 HERO SECTION (BENTO STYLE) -->
+    <section id="home" class="hero-bento-section">
+        <div class="hero-bento-header fade-up">
+            <h1 class="main-headline">
+                Premium Real Estate <em>Destinations</em>,<br>
+                Built with <em>Vision</em> and <em>Experience</em>
+            </h1>
+            
+            <div class="hero-supporting-copy">
+                <p>FNO Global Developers is a new-age real estate development company founded in 2025. The brand is young, but the experience behind it is strong. Our promoters bring nearly four decades of understanding in real estate, luxury construction, business, investments and long-term value creation.</p>
+            </div>
+            
+            <div class="hero-actions">
+                <button class="pill-btn-icon open-popup">
+                    Register Your Interest 
+                    <span class="icon-circle">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </span>
+                </button>
+            </div>
+        </div>
+
+        <div class="hero-bento-image-wrapper fade-up">
+            <img src="assets/hero_villa_1789570360602.jpg" alt="Premium Villa Architecture in North Goa" class="hero-bento-img parallax-img">
+            
+            <div class="hero-floating-tag">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                <span>North of Goa</span>
+            </div>
+            
+            <div class="hero-floating-card">
+                <div class="card-content">
+                    <span class="card-title">Completed Projects</span>
+                    <span class="card-value">12+</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <!-- 03B INLINE QUOTE SECTION -->
+    <section class="inline-quote-section section-padding fade-up dark-section">
+        <div class="container text-center">
+            <h2 class="inline-quote text-light">
+                We're all about <em>inspiring</em> people to<br>
+                explore <em>the coast</em> 
+                <span class="inline-img"><img src="assets/lifestyle_5_coastal_1789570659563.jpg" alt="Coastal lifestyle"></span> 
+                through a<br>
+                holistic <em>approach to luxury</em>,<br>
+                developing <em>both space &</em><br>
+                private 
+                <span class="inline-img"><img src="assets/lifestyle_4_pool_1789570648406.jpg" alt="Pool luxury"></span> 
+                <em>experiences.</em>
+            </h2>
+        </div>
+    </section>
+
+    <main class="site-wrapper">
+    <!-- 04 NORTH GOA LOCATION MOMENT -->
+    <section class="location-moment-section section-padding">
+        <div class="container">
+            <div class="bento-grid" style="grid-template-columns: 1fr 1.5fr;">
+                <!-- Left: Information -->
+                <div class="bento-card bento-card-light fade-up" style="display: flex; flex-direction: column; justify-content: center;">
+                    <h2 class="editorial-heading" style="font-size: 2.5rem; margin-bottom: 1rem;">Strategic<br>Location</h2>
+                    <p class="card-desc" style="font-size: 1.125rem; margin-bottom: 2rem;">Positioned along the vibrant NH-66 corridor, ensuring rapid connectivity to major transport hubs and lifestyle destinations.</p>
+                    
+                    <div style="display: flex; flex-direction: column; gap: 1rem;">
+                        <div style="display: flex; align-items: center; gap: 1rem; padding-bottom: 1rem; border-bottom: 1px solid rgba(26,60,52,0.1);">
+                            <div style="width: 12px; height: 12px; border-radius: 50%; background-color: var(--subtle-terracotta);"></div>
+                            <span style="font-size: 1rem; color: var(--charcoal); font-weight: 500;">Direct NH-66 Access</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 1rem; padding-bottom: 1rem; border-bottom: 1px solid rgba(26,60,52,0.1);">
+                            <div style="width: 12px; height: 12px; border-radius: 50%; background-color: var(--muted-gold);"></div>
+                            <span style="font-size: 1rem; color: var(--charcoal); font-weight: 500;">Rapid Airport Connectivity</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Map Visualization -->
+                <div class="bento-card fade-up" style="padding: 0; position: relative; background-color: #EBE8E3; overflow: hidden; min-height: 400px;">
+                    <!-- Grid Pattern Overlay -->
+                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: linear-gradient(rgba(26, 60, 52, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(26, 60, 52, 0.05) 1px, transparent 1px); background-size: 40px 40px;"></div>
+                    
+                    <svg class="goa-map-svg" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid meet" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                        <!-- Abstract coastline contour -->
+                        <path class="coastline" d="M -50 50 C 150 80, 250 150, 200 350 C 180 450, 250 550, 300 650" fill="none" stroke="var(--muted-olive)" stroke-width="2" stroke-opacity="0.3"/>
+                        <!-- Route line -->
+                        <path id="routeLine" class="route-line" d="M 50 150 C 250 150, 350 250, 320 400" fill="none" stroke="var(--muted-gold)" stroke-width="4" stroke-dasharray="8 8"/>
+                        
+                        <!-- Pulse Effect Group -->
+                        <g transform="translate(320, 400)">
+                            <circle class="pulse-ring" cx="0" cy="0" r="15" fill="var(--subtle-terracotta)" opacity="0.3">
+                                <animate attributeName="r" from="10" to="40" dur="2s" repeatCount="indefinite"/>
+                                <animate attributeName="opacity" from="0.5" to="0" dur="2s" repeatCount="indefinite"/>
+                            </circle>
+                            <circle class="location-pin" cx="0" cy="0" r="8" fill="var(--subtle-terracotta)" />
+                        </g>
+
+                        <!-- Labels -->
+                        <g transform="translate(350, 395)">
+                            <text x="0" y="0" style="font-family: var(--font-serif); font-size: 24px; font-weight: bold; fill: var(--deep-forest-green);">NORTH OF GOA</text>
+                            <text x="0" y="22" style="font-family: var(--font-sans); font-size: 14px; font-weight: bold; letter-spacing: 2px; fill: var(--subtle-terracotta);">COMING SOON</text>
+                            <rect x="0" y="32" width="60" height="24" rx="12" fill="var(--charcoal)"/>
+                            <text x="30" y="49" text-anchor="middle" style="font-family: var(--font-sans); font-size: 12px; font-weight: bold; fill: #fff;">NH-66</text>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 05 & 06 ABOUT & WHY FNO (BENTO GRID) -->
+    <section id="about" class="bento-grid-section section-padding">
+        
+        <div class="bento-header text-center">
+            <h2 class="editorial-heading">A New Brand Backed by Four Decades of Experience</h2>
+        </div>
+
+        <div class="bento-grid">
+            <!-- Large Text Block -->
+            <div class="bento-card bento-card-large bento-card-light fade-up">
+                <h3>Our Foundation</h3>
+                <p>While FNO Global Developers was established in 2025, our foundations are built on profound industry knowledge. We merge contemporary development practices with a deep understanding of market dynamics, curating projects that offer meaningful value.</p>
+                <br>
+                <p>Our approach is destination-led, focusing on locations that provide both an exceptional lifestyle and long-term potential.</p>
+                <div class="bento-footer">
+                    <span class="pill-badge">FNO / 2025</span>
+                </div>
+            </div>
+
+            <!-- Tall Image Block -->
+            <div class="bento-card bento-card-tall fade-up">
+                <img src="assets/lifestyle_editorial_1789570447335.jpg" alt="Luxury Lifestyle" class="bento-bg-img">
+            </div>
+
+            <!-- Why FNO Point 1 -->
+            <div class="bento-card bento-card-dark fade-up">
+                <div class="card-number">01</div>
+                <h3>Four Decades of Experience</h3>
+                <p>A deep legacy of real estate understanding ensuring quality and reliability.</p>
+            </div>
+
+            <!-- Image Block -->
+            <div class="bento-card fade-up">
+                <img src="assets/lifestyle_1_landscape_1789570563045.jpg" alt="Landscape" class="bento-bg-img">
+            </div>
+
+            <!-- Why FNO Point 2 -->
+            <div class="bento-card bento-card-light fade-up">
+                <div class="card-number">02</div>
+                <h3>Premium Location Selection</h3>
+                <p>Carefully identifying regions with high lifestyle value and connectivity.</p>
+            </div>
+
+            <!-- Why FNO Point 3 -->
+            <div class="bento-card bento-card-dark fade-up">
+                <div class="card-number">03</div>
+                <h3>Luxury with Real Meaning</h3>
+                <p>Creating spaces that prioritize space, natural light, and sophisticated materials.</p>
+            </div>
+
+            <!-- Wide Image Block -->
+            <div class="bento-card bento-card-wide fade-up">
+                <img src="assets/lifestyle_4_pool_1789570648406.jpg" alt="Pool" class="bento-bg-img">
+                <div class="bento-overlay">
+                    <div class="card-number">04</div>
+                    <h3>Destination-Led Thinking</h3>
+                </div>
+            </div>
+            
+            <!-- Why FNO Point 5 -->
+            <div class="bento-card bento-card-light fade-up">
+                <div class="card-number">05</div>
+                <h3>Clear Communication</h3>
+                <p>Committed to transparency and presenting our projects with absolute clarity.</p>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <!-- 07 NORTH OF GOA EDITORIAL SECTION -->
+    <section class="north-goa-editorial-section">
+        <div class="container-fluid">
+            <div class="editorial-banner">
+                <img src="assets/north_goa_editorial_1789570394778.jpg" alt="North Goa Landscape" class="banner-img parallax-img">
+                <div class="banner-overlay"></div>
+                <div class="banner-content">
+                    <h2 class="huge-editorial-text">NORTH OF GOA</h2>
+                </div>
+            </div>
+            <div class="container editorial-blocks">
+                <h3 class="editorial-subheading">Why North of Goa Is Getting Stronger Attention</h3>
+                <div class="grid-blocks">
+                    <div class="block fade-up">
+                        <p>Goa is evolving from a seasonal holiday spot to a premier year-round destination, driven by wellness, workations, and experience-led tourism.</p>
+                    </div>
+                    <div class="block fade-up">
+                        <p>The region's rich heritage, thriving gastronomy, and growing MICE (Meetings, Incentives, Conferences, and Exhibitions) sector are reshaping its lifestyle appeal.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <main class="site-wrapper">
+
+    <!-- 08 & 09 UPCOMING PROJECT (CARD STYLE) -->
+    <section id="project" class="upcoming-project-section section-padding">
+        <div class="container">
+            <div class="project-header text-center mb-large">
+                <span class="pill-badge mb-small">COMING SOON</span>
+                <h2 class="editorial-heading">A Premium Villa Community<br>with Direct NH-66 Connectivity</h2>
+            </div>
+            
+            <div class="property-card-large fade-up">
+                <div class="property-img-wrapper">
+                    <img src="assets/project_visual_1789570410039.jpg" alt="Premium Villa Community" class="property-img parallax-img">
+                </div>
+                
+                <div class="property-details-box">
+                    <div class="detail-item">
+                        <span class="detail-label">Status</span>
+                        <span class="detail-value">Coming Soon</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Location</span>
+                        <span class="detail-value">Opposite Aradhya Cinema, NH-66</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Type</span>
+                        <span class="detail-value">Premium Villa Community</span>
+                    </div>
+                    <div class="property-actions">
+                        <button class="pill-btn-icon open-popup">
+                            Register Early Interest 
+                            <span class="icon-circle">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10 DESTINATION-LED REAL ESTATE -->
+    </section>
+    </main>
+
+    <section id="destination" class="sticky-scroll-section dark-section">
+        <div class="sticky-scroll-container">
+            <!-- Left Side: Sticky Visuals -->
+            <div class="sticky-visuals">
+                <div class="sticky-img-container active" id="sticky-img-1">
+                    <img src="assets/lifestyle_1_landscape_1789570563045.jpg" alt="Location" class="sticky-bg-img">
+                </div>
+                <div class="sticky-img-container" id="sticky-img-2">
+                    <img src="assets/lifestyle_5_coastal_1789570659563.jpg" alt="Connectivity" class="sticky-bg-img">
+                </div>
+                <div class="sticky-img-container" id="sticky-img-3">
+                    <img src="assets/lifestyle_3_architecture_1789570586131.jpg" alt="Lifestyle" class="sticky-bg-img">
+                </div>
+                <div class="sticky-img-container" id="sticky-img-4">
+                    <img src="assets/lifestyle_4_pool_1789570648406.jpg" alt="Experiences" class="sticky-bg-img">
+                </div>
+                <div class="sticky-img-container" id="sticky-img-5">
+                    <img src="assets/project_visual_1789570410039.jpg" alt="Quality Planning" class="sticky-bg-img">
+                </div>
+                <div class="sticky-img-container" id="sticky-img-6">
+                    <img src="assets/completed_project_1789570671468.jpg" alt="Long Term Value" class="sticky-bg-img">
+                </div>
+            </div>
+
+            <!-- Right Side: Scrolling Story -->
+            <div class="scrolling-content">
+                <div class="scrolling-intro">
+                    <h2 class="editorial-heading text-light mb-large">Understanding Location, Lifestyle<br>and Long-Term Value</h2>
+                </div>
+                
+                <div class="scrolling-point" data-target="1">
+                    <span class="scroll-number">01</span>
+                    <h3 class="scroll-title">Location Comes First</h3>
+                    <p class="scroll-desc">Identifying regions poised for growth, ensuring your investment sits at the heart of emerging lifestyle hubs.</p>
+                </div>
+                
+                <div class="scrolling-point" data-target="2">
+                    <span class="scroll-number">02</span>
+                    <h3 class="scroll-title">Connectivity Adds Practical Value</h3>
+                    <p class="scroll-desc">Seamless access to major highways and infrastructure translates directly to everyday convenience and long-term appreciation.</p>
+                </div>
+                
+                <div class="scrolling-point" data-target="3">
+                    <span class="scroll-number">03</span>
+                    <h3 class="scroll-title">Lifestyle Demand Is Changing</h3>
+                    <p class="scroll-desc">Moving beyond basic amenities to curate environments that foster wellness, nature, and community.</p>
+                </div>
+                
+                <div class="scrolling-point" data-target="4">
+                    <span class="scroll-number">04</span>
+                    <h3 class="scroll-title">Experiences Add Value</h3>
+                    <p class="scroll-desc">Spaces designed not just to be lived in, but to be experienced—enhancing daily life through thoughtful architecture.</p>
+                </div>
+                
+                <div class="scrolling-point" data-target="5">
+                    <span class="scroll-number">05</span>
+                    <h3 class="scroll-title">Quality Planning Matters</h3>
+                    <p class="scroll-desc">Rigorous attention to detail from the master plan down to the finishes ensures lasting durability and aesthetic appeal.</p>
+                </div>
+                
+                <div class="scrolling-point" data-target="6">
+                    <span class="scroll-number">06</span>
+                    <h3 class="scroll-title">Long-Term Thinking Is Important</h3>
+                    <p class="scroll-desc">We build with the future in mind, creating timeless assets that preserve and grow wealth across generations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- 11 LUXURY LIFESTYLE VISUAL STORY -->
+    <section class="horizontal-gallery-section">
+        <div class="horizontal-scroll-container">
+            <div class="gallery-wrapper">
+                <div class="gallery-item">
+                    <img src="assets/lifestyle_1_landscape_1789570563045.jpg" alt="North Goa Landscape">
+                    <div class="gallery-caption">01 / LOCATION</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/lifestyle_2_villa_1789570574273.jpg" alt="Contemporary Villa">
+                    <div class="gallery-caption">02 / LIFESTYLE</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/lifestyle_3_architecture_1789570586131.jpg" alt="Tropical Architecture">
+                    <div class="gallery-caption">03 / ARCHITECTURE</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/lifestyle_4_pool_1789570648406.jpg" alt="Pool Outdoor Living">
+                    <div class="gallery-caption">04 / NATURE</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/lifestyle_5_coastal_1789570659563.jpg" alt="Coastal Road">
+                    <div class="gallery-caption">05 / EXPERIENCE</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <main class="site-wrapper">
+
+    <!-- 12 PROMOTERS -->
+    <section class="promoters-section section-padding">
+        <div class="container">
+            <h2 class="editorial-heading text-center mb-large">Led by Experience.<br>Driven by a New Vision.</h2>
+            
+            <div class="promoters-grid">
+                <div class="promoter-card">
+                    <div class="promoter-img-placeholder">
+                        <span>Founder Portrait<br>Photography to be added</span>
+                    </div>
+                    <div class="promoter-info">
+                        <h4>Kunal Arora</h4>
+                        <p>Founder & Managing Director</p>
+                    </div>
+                </div>
+                <div class="promoter-card">
+                    <div class="promoter-img-placeholder">
+                        <span>Founder Portrait<br>Photography to be added</span>
+                    </div>
+                    <div class="promoter-info">
+                        <h4>Spice Bindal</h4>
+                        <p>Founder & Managing Director</p>
+                    </div>
+                </div>
+                <div class="promoter-card">
+                    <div class="promoter-img-placeholder">
+                        <span>Founder Portrait<br>Photography to be added</span>
+                    </div>
+                    <div class="promoter-info">
+                        <h4>Jugal Arora</h4>
+                        <p>Founder & Chairman</p>
+                    </div>
+                </div>
+                <div class="promoter-card">
+                    <div class="promoter-img-placeholder">
+                        <span>Founder Portrait<br>Photography to be added</span>
+                    </div>
+                    <div class="promoter-info">
+                        <h4>Suman Bindal</h4>
+                        <p>Founder & Chairman</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <!-- 13 COMPLETED PROJECT -->
+    <section class="completed-project-section section-padding dark-section">
+        <div class="container">
+            <h2 class="editorial-heading mb-large">Our Completed Luxury Villa Work</h2>
+            
+            <div class="portfolio-item">
+                <div class="portfolio-visual">
+                    <img src="assets/completed_project_1789570671468.jpg" alt="Luxe Heaven Villas" class="portfolio-img">
+                </div>
+                <div class="portfolio-details">
+                    <h3>Luxe Heaven Villas</h3>
+                    <p class="portfolio-location">Porvorim, North of Goa</p>
+                    <span class="status-badge sold-out">SOLD OUT</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 14 CLEANER SURROUNDINGS -->
+    <section class="immersive-nature-section">
+        <img src="assets/cleaner_surroundings_1789570723747.jpg" alt="Tropical Environment" class="nature-bg parallax-img">
+        <div class="nature-overlay"></div>
+        <div class="container relative z-10 text-center">
+            <h2 class="huge-editorial-text text-light">Cleaner Surroundings.<br>Calmer Living.</h2>
+        </div>
+    </section>
+    <main class="site-wrapper">
+
+    <!-- 15 FAQ -->
+    <section id="faq" class="faq-section section-padding">
+        <div class="container">
+            <h2 class="editorial-heading text-center mb-large">Frequently Asked Questions</h2>
+            
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        Who is FNO Global Developers?
+                        <span class="icon"></span>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="accordion-inner">
+                            <p>FNO Global Developers is a new-age real estate brand founded in 2025, driven by promoters with nearly four decades of experience in real estate and luxury construction.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        Where is your upcoming project located?
+                        <span class="icon"></span>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="accordion-inner">
+                            <p>Our upcoming premium villa community is located opposite Aradhya Cinema in North of Goa, featuring direct connectivity to NH-66.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        What type of properties do you develop?
+                        <span class="icon"></span>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="accordion-inner">
+                            <p>We specialize in premium, luxury real estate destinations, focusing currently on high-end villa communities that offer exceptional lifestyle and architectural quality.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        Is Luxe Heaven Villas currently available?
+                        <span class="icon"></span>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="accordion-inner">
+                            <p>No, Luxe Heaven Villas in Porvorim is a completed project and is currently completely sold out.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    </main>
+
+    <!-- 16 FINAL CTA & FOOTER (FLOATING BLOCKS) -->
+    <section class="floating-cta-footer-section section-padding">
+        <div class="container">
+            <div class="cta-footer-grid">
+                
+                <!-- CTA Block -->
+                <div class="bento-card bento-card-large bento-card-dark cta-floating-block">
+                    <img src="assets/final_cta_1789570736839.jpg" alt="North Goa Sunset" class="bento-bg-img parallax-img">
+                    <div class="cta-overlay" style="background: rgba(0,0,0,0.4); position: absolute; top: 0; left: 0; right: 0; bottom: 0;"></div>
+                    <div class="cta-content" style="position: relative; z-index: 2; padding: 2rem;">
+                        <h2 class="editorial-heading text-light mb-small">Be Among the First to Know</h2>
+                        <p class="cta-desc text-light" style="font-size: 1.125rem; max-width: 600px; margin-bottom: 2rem;">A premium villa community is coming soon in North of Goa. Register your interest today to receive project updates, location details, private preview information and launch communication from FNO Global Developers.</p>
+                        <div class="cta-buttons" style="display: flex; gap: 1rem;">
+                            <button class="pill-btn-icon open-popup" style="background: var(--warm-ivory); color: var(--deep-forest-green);">
+                                Register Your Interest
+                                <span class="icon-circle" style="background: rgba(26,43,34,0.1);">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- New Advanced Footer -->
+        <footer class="footer-advanced">
+            <div class="footer-container">
+                <!-- Top section with links -->
+                <div class="footer-top-grid">
+                    <div class="footer-col">
+                        <h4>Company</h4>
+                        <a href="#">About us</a>
+                        <a href="#">Careers</a>
+                        <a href="#">FAQs</a>
+                        <a href="#">Contact</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Products</h4>
+                        <a href="#">Personal Savings</a>
+                        <a href="#">Group Savings</a>
+                        <a href="#">Savings Goals</a>
+                        <a href="#">Progress Tracking</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Resources</h4>
+                        <a href="#">Blog</a>
+                        <a href="#">Newsletter</a>
+                        <a href="#">Media</a>
+                        <a href="#">White paper</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Legal</h4>
+                        <a href="#">Privacy</a>
+                        <a href="#">Security</a>
+                        <a href="#">Terms of use</a>
+                        <a href="#">Acceptance policy</a>
+                        <a href="#">Cookies</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Contact</h4>
+                        <a href="#">support@fnoglobal.com</a>
+                        <a href="#">+91 98765 43210</a>
+                        <a href="#">1800-FNO-GLOBAL</a>
+                    </div>
+                </div>
+
+                <div class="footer-divider"></div>
+
+                <div class="footer-bottom-info">
+                    <div class="footer-copyright-info">
+                        <p>FNO Global Developers HQ, North Goa, Goa, India.</p>
+                        <p>&copy; 2026 FNO Global Developers. All rights reserved.</p>
+                    </div>
+                    <div class="footer-socials">
+                        <a href="#" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+                        <a href="#" aria-label="X (Twitter)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l11.733 16h4.267l-11.733 -16z"></path><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path></svg></a>
+                        <a href="#" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+                        <a href="#" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Massive Text fading into background -->
+            <div class="footer-massive-text">
+                FNO GLOBAL
+                <div class="massive-text-fade"></div>
+            </div>
+        </footer>
+    </section>
+
+    <!-- 17 POPUP FORM -->
+    <dialog id="enquiry-popup" class="popup-modal">
+        <div class="popup-layout">
+            <div class="popup-image">
+                <img src="assets/lifestyle_editorial_1789570447335.jpg" alt="Premium Living">
+            </div>
+            <div class="popup-content">
+                <button class="close-popup">&times;</button>
+                <div class="popup-header">
+                    <h3 class="popup-heading">Register Your Interest</h3>
+                    <p class="popup-subheading">A premium villa community is coming soon in North Goa. Join the exclusive list for early access.</p>
+                </div>
+                
+                <form class="enquiry-form">
+                    <div class="form-row">
+                        <div class="form-group floating">
+                            <input type="text" id="fullName" placeholder=" " required>
+                            <label for="fullName">Full Name</label>
+                        </div>
+                        <div class="form-group floating">
+                            <input type="tel" id="phone" placeholder=" " required>
+                            <label for="phone">Phone Number</label>
+                        </div>
+                    </div>
+                    <div class="form-group floating">
+                        <input type="email" id="email" placeholder=" " required>
+                        <label for="email">Email Address</label>
+                    </div>
+                    <div class="form-group floating">
+                        <select id="interestedIn" required>
+                            <option value="" disabled selected hidden></option>
+                            <option value="villa">Premium Villa</option>
+                            <option value="investment">Investment</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <label for="interestedIn">Interested In</label>
+                    </div>
+                    <button type="submit" class="pill-btn-icon full-width" style="justify-content: center; margin-top: 1rem;">
+                        Submit Details
+                        <span class="icon-circle">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </dialog>
+
+    <script src="script.js"></script>
+</body>
+</html>
