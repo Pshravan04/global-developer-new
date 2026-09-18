@@ -18,13 +18,58 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }, 0);
     
-    tlPreloader.to(".preloader-title", { opacity: 1, y: 0, duration: 1, ease: "power2.out" }, 0.5)
-               .to(".preloader-subtitle", { opacity: 1, y: 0, duration: 1, ease: "power2.out" }, 0.7)
+    tlPreloader.to(".preloader-logo-wrapper", { opacity: 1, y: 0, duration: 1, ease: "power2.out" }, 0.2)
                .to(".loader-percentage", { opacity: 1, duration: 0.5 }, 0.7)
                .to(".loader-line", { width: "100%", duration: 2, ease: "power2.inOut" }, 0)
                .to(preloader, { yPercent: -100, duration: 1, ease: "power4.inOut" }, 2.5)
-               .from(".hero-content", { y: 50, opacity: 0, duration: 1, ease: "power3.out" }, 3)
-               .from(".parallax-img", { scale: 1.1, duration: 2, ease: "power2.out" }, 2.5);
+               .from(".hero-content", { y: 50, opacity: 0, duration: 1, ease: "power3.out" }, 3);
+
+    // --------------------------------------------------------
+    // 1B. HERO SLIDER LOGIC
+    // --------------------------------------------------------
+    const slides = document.querySelectorAll('.hero-slide');
+    const nextBtn = document.querySelector('.next-slide');
+    const prevBtn = document.querySelector('.prev-slide');
+    let currentSlide = 0;
+    const totalSlides = slides.length;
+    let slideInterval;
+
+    function goToSlide(index) {
+        slides[currentSlide].classList.remove('active');
+        currentSlide = (index + totalSlides) % totalSlides;
+        slides[currentSlide].classList.add('active');
+    }
+
+    function nextSlide() {
+        goToSlide(currentSlide + 1);
+    }
+
+    function prevSlide() {
+        goToSlide(currentSlide - 1);
+    }
+
+    function startSlider() {
+        slideInterval = setInterval(nextSlide, 5000);
+    }
+
+    function resetSlider() {
+        clearInterval(slideInterval);
+        startSlider();
+    }
+
+    if (slides.length > 0) {
+        nextBtn.addEventListener('click', () => {
+            nextSlide();
+            resetSlider();
+        });
+        
+        prevBtn.addEventListener('click', () => {
+            prevSlide();
+            resetSlider();
+        });
+
+        startSlider();
+    }
 
     // --------------------------------------------------------
     // 2. HEADER SCROLL & MOBILE CTA
