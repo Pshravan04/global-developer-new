@@ -513,24 +513,39 @@ h1, h2, h3, h4, h5, h6 {
    ========================================================================== */
 .inline-quote-section {
     background-color: var(--deep-forest-green);
-    padding: 6rem 5% 8rem;
+    padding: 10rem 0; /* Changed from 6rem 5% 8rem to match the full-width, clean look */
+}
+
+.quote-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 5%;
 }
 
 .inline-quote {
     font-family: var(--font-sans);
     font-weight: 300;
-    font-size: clamp(2rem, 4vw, 4.5rem);
-    line-height: 1.25; /* Slightly increased line-height to accommodate pills */
+    font-size: clamp(2rem, 5vw, 4.5rem); /* Made it slightly bigger/more fluid */
+    line-height: 1.4; 
     letter-spacing: -0.02em;
     color: var(--warm-ivory);
-    max-width: 1100px;
-    margin: 0 auto;
+    text-align: left; /* Switched to left align for a more editorial feel */
 }
 
-.inline-quote em {
+.serif-italic {
     font-family: var(--font-serif);
     font-style: italic;
-    font-weight: 500;
+    font-weight: 400;
+}
+
+.quote-author {
+    margin-top: 3rem;
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--muted-gold);
+    text-align: right;
 }
 
 .inline-img {
@@ -942,23 +957,18 @@ h1, h2, h3, h4, h5, h6 {
 /* ==========================================================================
    12 PROMOTERS
    ========================================================================== */
-.promoters-checkerboard {
+.promoters-grid-4col {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    /* Remove gap to make it a seamless checkerboard, or keep a small gap */
+    grid-template-columns: repeat(4, 1fr);
     gap: 0;
-    max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
-    border-radius: var(--radius-lg);
-    overflow: hidden;
-    box-shadow: var(--shadow-medium);
 }
 
 .promoter-block {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     aspect-ratio: 1; /* Square blocks */
 }
 
@@ -976,11 +986,45 @@ h1, h2, h3, h4, h5, h6 {
 
 .promoter-block.text-block {
     padding: 3rem;
-    text-align: center;
+    text-align: left;
+    align-items: flex-start;
+    justify-content: center;
 }
 
 .promoter-block.bg-light {
-    background-color: var(--warm-ivory);
+    background-color: #e9e5de; /* Match the screenshot's greyish beige */
+    color: var(--charcoal);
+}
+
+.promoter-info h4 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: var(--deep-forest-green);
+}
+
+.promoter-info p {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--muted-olive);
+    margin-bottom: 2rem;
+}
+
+.promoter-socials {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.promoter-socials a {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--charcoal);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.promoter-socials a:hover {
     color: var(--deep-forest-green);
 }
 
@@ -1558,15 +1602,12 @@ h1, h2, h3, h4, h5, h6 {
     .project-details-grid { grid-template-columns: 1fr; }
     .destination-layout { flex-direction: column; height: auto; }
     .destination-images { height: 400px; }
-    .promoters-checkerboard { grid-template-columns: 1fr; }
-    .promoter-block { aspect-ratio: auto; padding: 2rem 1rem; }
-    .promoter-block.image-block { aspect-ratio: 1; }
+    .promoters-grid-4col { grid-template-columns: repeat(2, 1fr); }
+    .promoter-block { aspect-ratio: 1; padding: 2rem; }
     
     /* On mobile, reorder so image is always above text */
-    .promoters-checkerboard .promoter-block:nth-child(3) { order: 4; } /* Text */
-    .promoters-checkerboard .promoter-block:nth-child(4) { order: 3; } /* Image */
-    .promoters-checkerboard .promoter-block:nth-child(7) { order: 8; } /* Text */
-    .promoters-checkerboard .promoter-block:nth-child(8) { order: 7; } /* Image */
+
+
     .grid-blocks { grid-template-columns: 1fr; }
 }
 
