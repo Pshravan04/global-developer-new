@@ -41,32 +41,32 @@ document.addEventListener("DOMContentLoaded", () => {
         let loadObj = { value: 0 };
 
         tlPre
-            .to('.preloader-logo-wrapper', { opacity: 1, scale: 1, duration: 0.9, ease: 'power3.out' }, 0.3)
-            .to('.loader-percentage', { opacity: 1, duration: 0.4 }, 0.6)
+            .to('.preloader-logo-wrapper', { opacity: 1, scale: 1, duration: 0.5, ease: 'power3.out' }, 0.1)
+            .to('.loader-percentage', { opacity: 1, duration: 0.2 }, 0.2)
             .to(loadObj, {
                 value: 100,
-                duration: 2,
+                duration: 1,
                 ease: 'power2.inOut',
                 onUpdate() {
                     if (percentEl) percentEl.textContent = Math.round(loadObj.value) + '%';
                 }
-            }, 0.6)
-            // Draw SVG strokes
+            }, 0.2)
+            // Draw SVG strokes quickly
             .to([...palmLeaves, ...palmTrunks, ...orbitArcs], {
-                strokeDashoffset: 0, duration: 1.2, ease: 'power2.inOut', stagger: 0.08
-            }, 0.8)
+                strokeDashoffset: 0, duration: 0.6, ease: 'power2.inOut', stagger: 0.02
+            }, 0.3)
             // Fade palm + globe motifs in
-            .to([...palmEls, globeMotif], { opacity: 1, y: 0, duration: 0.8, ease: 'power2.out', stagger: 0.12 }, 1.2)
+            .to([...palmEls, globeMotif], { opacity: 1, y: 0, duration: 0.4, ease: 'power2.out', stagger: 0.05 }, 0.5)
             // Horizon glow
-            .to(horizonEl, { opacity: 1, duration: 0.6, ease: 'power2.out' }, 1.6)
-            // Phase 2: Shutter exit — panels slide up staggered
+            .to(horizonEl, { opacity: 1, duration: 0.3, ease: 'power2.out' }, 0.6)
+            // Phase 2: Shutter exit fast
             .to(shutterPanels, {
                 yPercent: -105,
-                duration: 1.1,
+                duration: 0.7,
                 ease: 'cubic-bezier(0.76, 0, 0.24, 1)',
-                stagger: 0.06
-            }, 2.8)
-            .call(finishLoader, null, 3.9);
+                stagger: 0.04
+            }, 1.2)
+            .call(finishLoader, null, 1.8);
     }
 
     // --------------------------------------------------------
@@ -247,21 +247,35 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-    // Horizontal Scroll Gallery
-    if (window.innerWidth > 768) {
-        const galleryWrapper = document.querySelector('.gallery-wrapper');
-        if (galleryWrapper) {
-            gsap.to(galleryWrapper, {
-                x: () => -(galleryWrapper.scrollWidth - window.innerWidth + window.innerWidth * 0.1),
-                ease: "none",
-                scrollTrigger: {
-                    trigger: ".horizontal-gallery-section",
-                    start: "top center",
-                    end: "bottom top",
-                    scrub: 1,
-                    pin: false
+    // Horizontal Hover Gallery Slider
+    const galleryWrapper = document.querySelector('.gallery-wrapper');
+    const gallerySection = document.querySelector('.horizontal-gallery-section');
+    if (galleryWrapper && gallerySection) {
+        const prevBtn = gallerySection.querySelector('.prev-btn');
+        const nextBtn = gallerySection.querySelector('.next-btn');
+        let currentPos = 0;
+        const itemWidth = 432; // 400px width + 32px gap (2rem)
+        
+        // Remove ScrollTrigger if we are using click nav
+        if (prevBtn && nextBtn) {
+            const maxScroll = Math.max(0, galleryWrapper.scrollWidth - window.innerWidth + 100);
+            
+            function moveGallery(direction) {
+                if (direction === 'next') {
+                    currentPos = Math.min(currentPos + itemWidth, maxScroll);
+                } else {
+                    currentPos = Math.max(currentPos - itemWidth, 0);
                 }
-            });
+                
+                gsap.to(galleryWrapper, {
+                    x: -currentPos,
+                    duration: 0.8,
+                    ease: "power3.out"
+                });
+            }
+            
+            nextBtn.addEventListener('click', () => moveGallery('next'));
+            prevBtn.addEventListener('click', () => moveGallery('prev'));
         }
     }
 
@@ -474,4 +488,69 @@ document.addEventListener("DOMContentLoaded", () => {
     openBtns.forEach(btn => {
         btn.addEventListener('click', () => document.body.classList.add('modal-open'));
     });
+
+    // --------------------------------------------------------
+    // 7. GSAP SCROLL-DRIVEN MARQUEE
+    // --------------------------------------------------------
+    const marqueeContent = document.querySelector('.marquee-content');
+    if (marqueeContent) {
+        // Clone the content so it repeats infinitely seamlessly
+        const clone = marqueeContent.innerHTML;
+        marqueeContent.innerHTML += clone;
+        
+        let marqueeTween = gsap.to('.marquee-content', {
+            xPercent: -50,
+            ease: "none",
+            duration: 25,
+            repeat: -1
+        });
+        
+        // Speed up when scrolling
+        ScrollTrigger.create({
+            trigger: ".marquee-section",
+            start: "top bottom",
+            end: "bottom top",
+            onUpdate: (self) => {
+                // Adjust time scale based on scroll velocity
+                gsap.to(marqueeTween, {
+                    timeScale: 1 + Math.abs(self.getVelocity() / 100),
+                    duration: 0.2,
+                    overwrite: "auto",
+                    onComplete: () => {
+                        gsap.to(marqueeTween, { timeScale: 1, duration: 1 });
+                    }
+                });
+            }
+        });
+    }
+
+    // --------------------------------------------------------
+    // 8. MAGNETIC HOVER EFFECTS
+    // --------------------------------------------------------
+    const magneticBtns = document.querySelectorAll('.pill-btn, .nav-btn, .gallery-nav-btn');
+    
+    magneticBtns.forEach(btn => {
+        btn.addEventListener('mousemove', (e) => {
+            const rect = btn.getBoundingClientRect();
+            const x = e.clientX - rect.left - rect.width / 2;
+            const y = e.clientY - rect.top - rect.height / 2;
+            
+            gsap.to(btn, {
+                x: x * 0.4,
+                y: y * 0.4,
+                duration: 0.3,
+                ease: "power2.out"
+            });
+        });
+        
+        btn.addEventListener('mouseleave', () => {
+            gsap.to(btn, {
+                x: 0,
+                y: 0,
+                duration: 0.7,
+                ease: "elastic.out(1, 0.3)"
+            });
+        });
+    });
+
 });
