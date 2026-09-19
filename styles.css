@@ -425,6 +425,7 @@ h1, h2, h3, h4, h5, h6 {
     gap: 1rem;
 }
 
+/* Base button styles */
 .slider-btn {
     width: 48px;
     height: 48px;
@@ -436,13 +437,56 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
     backdrop-filter: blur(4px);
 }
 
 .slider-btn:hover {
     background-color: var(--warm-ivory);
     color: var(--deep-forest-green);
+    transform: scale(1.1);
+}
+
+@media (min-width: 769px) {
+    .slider-controls {
+        top: 50%;
+        bottom: auto;
+        left: 0;
+        right: 0;
+        transform: translateY(-50%);
+        justify-content: space-between;
+        padding: 0 3rem;
+        pointer-events: none; /* Let clicks pass through empty space */
+    }
+    
+    .slider-btn {
+        pointer-events: auto; /* Buttons are clickable */
+        opacity: 0;
+        width: 60px;
+        height: 60px;
+    }
+    
+    .slider-btn.prev-slide {
+        transform: translateX(-30px);
+    }
+    
+    .slider-btn.next-slide {
+        transform: translateX(30px);
+    }
+    
+    .hero-slider-section:hover .slider-btn.prev-slide {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    
+    .hero-slider-section:hover .slider-btn.next-slide {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    
+    .slider-btn:hover {
+        transform: scale(1.1) !important;
+    }
 }
 
 @media (max-width: 768px) {
@@ -1658,6 +1702,59 @@ h1, h2, h3, h4, h5, h6 {
     height: 40%;
     background: linear-gradient(to top, var(--deep-forest-green) 0%, transparent 100%);
     z-index: 2;
+}
+
+/* ==========================================================================
+   HOVER EFFECTS
+   ========================================================================== */
+.btn-primary:hover, .pill-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.bento-card {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.bento-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+}
+
+.property-card-large .property-img-wrapper,
+.promoter-block.image-block,
+.gallery-item {
+    overflow: hidden;
+}
+
+.property-img, .promoter-img, .gallery-item img {
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.property-card-large:hover .property-img,
+.promoter-block:hover .promoter-img,
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+.header-nav ul li a {
+    position: relative;
+}
+.header-nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: -4px;
+    left: 0;
+    background-color: var(--warm-ivory);
+    transition: width 0.3s ease;
+}
+.header-nav ul li a:hover::after {
+    width: 100%;
+}
+
+.scrolled .header-nav ul li a::after {
+    background-color: var(--deep-forest-green);
 }
 
 /* ==========================================================================
