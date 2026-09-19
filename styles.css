@@ -50,7 +50,7 @@
 html {
     scroll-behavior: smooth;
     font-size: 16px;
-    overflow-x: hidden;
+    overflow-x: clip;
 }
 
 body {
@@ -58,7 +58,7 @@ body {
     color: var(--charcoal);
     background-color: var(--sand-beige);
     line-height: 1.6;
-    overflow-x: hidden;
+    overflow-x: clip;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -871,7 +871,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .card-number {
-    font-family: var(--font-serif);
+    font-family: var(--font-sans);
     font-size: 2rem;
     opacity: 0.6;
     margin-bottom: 1rem;
@@ -891,7 +891,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Enhanced Bento Card Typography */
 .card-number {
-    font-family: var(--font-serif);
+    font-family: var(--font-sans);
     font-size: 2.5rem;
     color: var(--muted-olive);
     margin-bottom: 1rem;
@@ -1390,7 +1390,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .stat-value {
-    font-family: var(--font-serif);
+    font-family: var(--font-sans);
     font-size: 2rem;
     font-weight: 600;
     line-height: 1;
@@ -1779,7 +1779,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .scroll-number {
-    font-family: var(--font-serif);
+    font-family: var(--font-sans);
     font-size: 4rem;
     color: var(--soft-gold);
     margin-bottom: 1rem;
@@ -1901,7 +1901,7 @@ h1, h2, h3, h4, h5, h6 {
     left: 50%;
     transform: translateX(-50%);
     font-family: var(--font-sans);
-    font-size: 22vw;
+    font-size: 13.5vw;
     font-weight: bold;
     color: rgba(255, 255, 255, 0.08);
     z-index: 1;
@@ -2180,7 +2180,124 @@ body.modal-open { overflow: hidden; }
 }
 
 /* ==========================================================================
-   MOBILE RESPONSIVENESS — 768px
+   16. Contact Section
+   ========================================================================== */
+
+.contact-section {
+    background-color: var(--deep-forest-green);
+    padding: var(--spacing-xl) 0;
+    position: relative;
+    z-index: 10;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.contact-info {
+    padding-right: 2rem;
+}
+
+.contact-desc {
+    margin-bottom: 3rem;
+    opacity: 0.8;
+    max-width: 90%;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.contact-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.contact-label {
+    font-family: var(--font-sans);
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--muted-gold);
+}
+
+.contact-link, .contact-text {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    color: var(--warm-ivory);
+    text-decoration: none;
+    transition: var(--transition-smooth);
+}
+
+.contact-link:hover {
+    color: var(--muted-gold);
+}
+
+.contact-form-wrapper {
+    background-color: rgba(255, 255, 255, 0.03);
+    padding: 3rem;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.contact-section .form-group input,
+.contact-section .form-group textarea {
+    color: var(--warm-ivory);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    width: 100%;
+    padding: 1.25rem 1rem 0.5rem;
+    background: transparent;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    border-radius: 0;
+}
+
+.contact-section .form-group {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.contact-section .form-group label {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: var(--font-sans);
+    color: rgba(255, 255, 255, 0.6);
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.contact-section .form-group textarea ~ label {
+    top: 1.5rem;
+}
+
+.contact-section .form-group input:focus,
+.contact-section .form-group textarea:focus {
+    border-bottom-color: var(--warm-ivory);
+    outline: none;
+}
+
+.contact-section .form-group input:focus ~ label,
+.contact-section .form-group input:not(:placeholder-shown) ~ label,
+.contact-section .form-group textarea:focus ~ label,
+.contact-section .form-group textarea:not(:placeholder-shown) ~ label {
+    top: 0;
+    font-size: 0.75rem;
+    color: var(--muted-gold);
+}
+
+/* ==========================================================================
+   17. Media Queries
    ========================================================================== */
 @media (max-width: 768px) {
     .hero-content { padding-top: 6rem; padding-bottom: 8rem; }
@@ -2234,9 +2351,14 @@ body.modal-open { overflow: hidden; }
     .footer-top-grid { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
     .footer-bottom-info { flex-direction: column; gap: 1.5rem; text-align: center; }
     .footer-socials { justify-content: center; }
-    .footer-massive-text { font-size: 20vw; }
+    .footer-massive-text { font-size: 15vw; bottom: -5%; }
     .footer-inner { flex-direction: column; text-align: center; }
     .footer-landscape { height: 300px; }
+
+    .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
+    .contact-info { padding-right: 0; text-align: center; }
+    .contact-desc { margin: 0 auto 2rem; }
+    .contact-form-wrapper { padding: 2rem 1.5rem; }
 
     .accordion-header { min-height: 56px; }
     .cta-buttons { flex-direction: column; }

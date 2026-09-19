@@ -43,32 +43,32 @@ document.addEventListener("DOMContentLoaded", () => {
         let loadObj = { value: 0 };
 
         tlPre
-            .to('.preloader-logo-wrapper', { opacity: 1, scale: 1, duration: 0.8, ease: 'power3.out' }, 0.2)
-            .to('.loader-percentage', { opacity: 1, duration: 0.4 }, 0.4)
+            .to('.preloader-logo-wrapper', { opacity: 1, scale: 1, duration: 0.5, ease: 'power3.out' }, 0.1)
+            .to('.loader-percentage', { opacity: 1, duration: 0.2 }, 0.2)
             .to(loadObj, {
                 value: 100,
-                duration: 1.5,
+                duration: 1.0,
                 ease: 'power2.inOut',
                 onUpdate() {
                     if (percentEl) percentEl.textContent = Math.round(loadObj.value) + '%';
                 }
-            }, 0.4)
-            // Draw SVG strokes slowly to show trees
+            }, 0.2)
+            // Draw SVG strokes faster to show trees
             .to([...palmLeaves, ...palmTrunks, ...orbitArcs], {
-                strokeDashoffset: 0, duration: 1.2, ease: 'power2.inOut', stagger: 0.05
-            }, 0.5)
-            // Fade palm trees + globe motifs in
-            .to([...palmEls, globeMotif], { opacity: 1, y: 0, duration: 0.8, ease: 'power2.out', stagger: 0.1 }, 0.8)
+                strokeDashoffset: 0, duration: 0.8, ease: 'power2.inOut', stagger: 0.03
+            }, 0.3)
+            // Fade palm trees + globe motifs in faster
+            .to([...palmEls, globeMotif], { opacity: 1, y: 0, duration: 0.5, ease: 'power2.out', stagger: 0.05 }, 0.4)
             // Horizon glow
-            .to(horizonEl, { opacity: 1, duration: 0.5, ease: 'power2.out' }, 1.0)
-            // Phase 2: Shutter exit after a pause
+            .to(horizonEl, { opacity: 1, duration: 0.3, ease: 'power2.out' }, 0.6)
+            // Phase 2: Shutter exit after 1.2s
             .to(shutterPanels, {
                 yPercent: -105,
-                duration: 1.0,
+                duration: 0.8,
                 ease: 'cubic-bezier(0.76, 0, 0.24, 1)',
-                stagger: 0.08
-            }, 2.5)
-            .call(finishLoader, null, 3.5);
+                stagger: 0.05
+            }, 1.2)
+            .call(finishLoader, null, 2.0);
     }
 
     // --------------------------------------------------------
