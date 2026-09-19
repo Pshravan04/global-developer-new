@@ -8,7 +8,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <meta name="description" content="FNO Global Developers — Premium real estate investment opportunities in North Goa. Led by experience, driven by a new vision of coastal living.">
+    <!-- Preload logo to prevent pop-in during cinematic loader -->
+    <link rel="preload" href="FNO LOGO MAIN.png" as="image">
     <link rel="stylesheet" href="styles.css">
+
     
     <!-- GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
@@ -18,16 +22,62 @@
     <!-- Global Wrapper -->
     
 
-    <!-- 01 PRELOADER -->
-    <div id="preloader" class="preloader">
-        <div class="preloader-content">
+    <!-- 01 PRELOADER (Cinematic) -->
+    <div id="preloader" class="preloader" aria-hidden="true" aria-label="Loading FNO Global Developers">
+        <!-- Base Scene -->
+        <div class="preloader-scene">
+            <!-- Brand SVG Motifs -->
+            <div class="preloader-motifs">
+                <!-- Palm Left -->
+                <svg class="palm palm-left" viewBox="0 0 80 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <line class="palm-trunk" x1="40" y1="200" x2="40" y2="80" stroke="#c5a059" stroke-width="2" stroke-linecap="round"/>
+                    <path class="palm-leaf palm-leaf-1" d="M40 100 Q10 60 0 30" fill="none" stroke="#c5a059" stroke-width="1.5" stroke-linecap="round"/>
+                    <path class="palm-leaf palm-leaf-2" d="M40 90 Q70 55 80 25" fill="none" stroke="#c5a059" stroke-width="1.5" stroke-linecap="round"/>
+                    <path class="palm-leaf palm-leaf-3" d="M40 95 Q20 70 5 65" fill="none" stroke="#c5a059" stroke-width="1.5" stroke-linecap="round"/>
+                    <path class="palm-leaf palm-leaf-4" d="M40 95 Q60 68 75 60" fill="none" stroke="#c5a059" stroke-width="1.5" stroke-linecap="round"/>
+                    <path class="palm-leaf palm-leaf-5" d="M40 100 Q30 80 20 85" fill="none" stroke="#c5a059" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+                <!-- Globe/Compass -->
+                <svg class="globe-motif" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <circle class="globe-ring globe-ring-1" cx="60" cy="60" r="50" fill="none" stroke="#c5a059" stroke-width="1" stroke-opacity="0.4"/>
+                    <circle class="globe-ring globe-ring-2" cx="60" cy="60" r="36" fill="none" stroke="#c5a059" stroke-width="1" stroke-opacity="0.3"/>
+                    <circle class="globe-ring globe-ring-3" cx="60" cy="60" r="22" fill="none" stroke="#c5a059" stroke-width="1" stroke-opacity="0.25"/>
+                    <line class="compass-line" x1="60" y1="10" x2="60" y2="110" stroke="#c5a059" stroke-width="0.8" stroke-opacity="0.3"/>
+                    <line class="compass-line" x1="10" y1="60" x2="110" y2="60" stroke="#c5a059" stroke-width="0.8" stroke-opacity="0.3"/>
+                    <circle cx="60" cy="60" r="4" fill="#c5a059" opacity="0.8"/>
+                    <path class="orbit-arc" d="M 60 10 A 50 50 0 0 1 110 60" fill="none" stroke="#c5a059" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <!-- Palm Right -->
+                <svg class="palm palm-right" viewBox="0 0 80 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <line class="palm-trunk" x1="40" y1="200" x2="40" y2="80" stroke="#c5a059" stroke-width="2" stroke-linecap="round"/>
+                    <path class="palm-leaf palm-leaf-1" d="M40 100 Q10 60 0 30" fill="none" stroke="#c5a059" stroke-width="1.5" stroke-linecap="round"/>
+                    <path class="palm-leaf palm-leaf-2" d="M40 90 Q70 55 80 25" fill="none" stroke="#c5a059" stroke-width="1.5" stroke-linecap="round"/>
+                    <path class="palm-leaf palm-leaf-3" d="M40 95 Q20 70 5 65" fill="none" stroke="#c5a059" stroke-width="1.5" stroke-linecap="round"/>
+                    <path class="palm-leaf palm-leaf-4" d="M40 95 Q60 68 75 60" fill="none" stroke="#c5a059" stroke-width="1.5" stroke-linecap="round"/>
+                    <path class="palm-leaf palm-leaf-5" d="M40 100 Q30 80 20 85" fill="none" stroke="#c5a059" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+            </div>
+
+            <!-- Horizon line -->
+            <div class="preloader-horizon"></div>
+
+            <!-- Logo -->
             <div class="preloader-logo-wrapper">
                 <img src="FNO LOGO MAIN.png" alt="FNO Global" class="preloader-logo">
             </div>
-            <div class="loader-line-container">
-                <div class="loader-line"></div>
-            </div>
+
+            <!-- Counter -->
             <div class="loader-percentage">0%</div>
+        </div>
+
+        <!-- Shutter Panels -->
+        <div class="shutter-panels" aria-hidden="true">
+            <div class="shutter-panel" style="background:#1a3c34"></div>
+            <div class="shutter-panel" style="background:#c5a059"></div>
+            <div class="shutter-panel" style="background:#fcfbf9"></div>
+            <div class="shutter-panel" style="background:#1a3c34"></div>
+            <div class="shutter-panel" style="background:#c5a059"></div>
+            <div class="shutter-panel" style="background:#fcfbf9"></div>
         </div>
     </div>
 
@@ -35,11 +85,11 @@
     <header id="header" class="site-header">
         <div class="header-inner">
             <div class="header-left">
-                <a href="#" class="logo-link">
+                <a href="#home" class="logo-link">
                     <img src="FNO LOGO MAIN.png" alt="FNO Global Developers" class="nav-logo-img">
                 </a>
             </div>
-            <nav class="header-nav">
+            <nav class="header-nav" id="desktop-nav" aria-label="Main navigation">
                 <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About Us</a></li>
@@ -51,9 +101,30 @@
             </nav>
             <div class="header-right">
                 <button class="pill-btn open-popup">Register Your Interest</button>
+                <!-- Hamburger -->
+                <button class="hamburger" id="menu-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+                    <span></span><span></span><span></span>
+                </button>
             </div>
         </div>
     </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="mobile-menu" role="dialog" aria-modal="true" aria-label="Navigation menu" hidden>
+        <button class="mobile-menu-close" id="menu-close" aria-label="Close navigation menu">&times;</button>
+        <nav aria-label="Mobile navigation">
+            <ul>
+                <li><a href="#home" class="mobile-nav-link">Home</a></li>
+                <li><a href="#about" class="mobile-nav-link">About Us</a></li>
+                <li><a href="#project" class="mobile-nav-link">Upcoming Project</a></li>
+                <li><a href="#destination" class="mobile-nav-link">Decoding Land</a></li>
+                <li><a href="#faq" class="mobile-nav-link">FAQs</a></li>
+                <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+            </ul>
+        </nav>
+        <button class="pill-btn open-popup mobile-menu-cta">Register Your Interest</button>
+    </div>
+    <div id="menu-backdrop" class="menu-backdrop"></div>
 
     <!-- 03 HERO SECTION (SLIDER) -->
     <section id="home" class="hero-slider-section">
@@ -123,7 +194,115 @@
         </div>
     </section>
 
-    
+    <!-- 03C CREATIVE MARQUEE -->
+    <section class="marquee-section dark-section">
+        <div class="marquee-wrapper">
+            <div class="marquee-content">
+                <span>LUXURY REDEFINED</span>
+                <span class="separator">•</span>
+                <span class="serif-italic">BESPOKE VILLAS</span>
+                <span class="separator">•</span>
+                <span>ARCHITECTURAL BRILLIANCE</span>
+                <span class="separator">•</span>
+                <span class="serif-italic">NORTH GOA</span>
+                <span class="separator">•</span>
+                <span>EXCLUSIVE LIFESTYLE</span>
+                <span class="separator">•</span>
+                <span class="serif-italic">PRIVATE ESTATES</span>
+                <span class="separator">•</span>
+                <!-- Duplicate for seamless loop -->
+                <span aria-hidden="true">LUXURY REDEFINED</span>
+                <span class="separator" aria-hidden="true">•</span>
+                <span class="serif-italic" aria-hidden="true">BESPOKE VILLAS</span>
+                <span class="separator" aria-hidden="true">•</span>
+                <span aria-hidden="true">ARCHITECTURAL BRILLIANCE</span>
+                <span class="separator" aria-hidden="true">•</span>
+                <span class="serif-italic" aria-hidden="true">NORTH GOA</span>
+                <span class="separator" aria-hidden="true">•</span>
+                <span aria-hidden="true">EXCLUSIVE LIFESTYLE</span>
+                <span class="separator" aria-hidden="true">•</span>
+                <span class="serif-italic" aria-hidden="true">PRIVATE ESTATES</span>
+                <span class="separator" aria-hidden="true">•</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 03D FEATURES SLIDER SECTION -->
+    <section class="features-slider-section section-padding">
+        <div class="container" style="position: relative;">
+            <div class="section-header" style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 3rem;">
+                <div>
+                    <h2 class="editorial-heading mb-small">The Details Matter</h2>
+                    <p class="section-subtitle">Crafted with precision for an unparalleled living experience.</p>
+                </div>
+                <!-- Custom Navigation for Features Slider -->
+                <div class="feature-slider-nav">
+                    <button class="nav-btn prev-btn" aria-label="Previous">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+                    </button>
+                    <button class="nav-btn next-btn" aria-label="Next">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="feature-slider-container">
+                <div class="feature-slider-track">
+                    <!-- Feature Card 1 -->
+                    <div class="feature-card hover-lift">
+                        <div class="feature-img-wrapper">
+                            <img src="assets/completed_project_1789570671468.jpg" alt="Exterior Lines" class="feature-img">
+                        </div>
+                        <div class="feature-content">
+                            <h3>Perfect Exterior Lines</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </div>
+                    </div>
+                    <!-- Feature Card 2 -->
+                    <div class="feature-card hover-lift">
+                        <div class="feature-img-wrapper">
+                            <img src="assets/lifestyle_1_landscape_1789570563045.jpg" alt="Square footage optimization" class="feature-img">
+                        </div>
+                        <div class="feature-content">
+                            <h3>Square footage optimization</h3>
+                            <p>Praesent porttitor pharetra sodales. Sed quam elit, congue eget est.</p>
+                        </div>
+                    </div>
+                    <!-- Feature Card 3 -->
+                    <div class="feature-card hover-lift">
+                        <div class="feature-img-wrapper">
+                            <img src="assets/lifestyle_2_villa_1789570574273.jpg" alt="Aesthetic layouts" class="feature-img">
+                        </div>
+                        <div class="feature-content">
+                            <h3>Aesthetic layouts</h3>
+                            <p>Vivamus tempor a mauris a consectetur. Duis lorem mauris, feugiat.</p>
+                        </div>
+                    </div>
+                    <!-- Feature Card 4 -->
+                    <div class="feature-card hover-lift">
+                        <div class="feature-img-wrapper">
+                            <img src="assets/lifestyle_3_architecture_1789570586131.jpg" alt="Natural light utilization" class="feature-img">
+                        </div>
+                        <div class="feature-content">
+                            <h3>Natural light utilization</h3>
+                            <p>Interdum accumsan libero. Etiam pretium laoreet tincidunt. Morbi semper.</p>
+                        </div>
+                    </div>
+                    <!-- Feature Card 5 -->
+                    <div class="feature-card hover-lift">
+                        <div class="feature-img-wrapper">
+                            <img src="assets/lifestyle_4_pool_1789570648406.jpg" alt="Precise details" class="feature-img">
+                        </div>
+                        <div class="feature-content">
+                            <h3>Precise details</h3>
+                            <p>Praesent a urna scelerisque. Donec venenatis.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- 04 NORTH GOA LOCATION MOMENT -->
     <section class="location-moment-section section-padding">
         <div class="container">
@@ -225,7 +404,7 @@
             <div class="bento-card bento-card-dark fade-up">
                 <div class="card-number">03</div>
                 <h3>Luxury with Real Meaning</h3>
-                <p>Creating spaces that prioritize space, natural light, and sophisticated materials.</p>
+                <p>Luxury is not only about expensive finishes. It is about space, privacy, comfort, thoughtful design, quality materials and details that make everyday living better.</p>
             </div>
 
             <!-- Wide Image Block -->
@@ -234,6 +413,7 @@
                 <div class="bento-overlay">
                     <div class="card-number">04</div>
                     <h3>Destination-Led Thinking</h3>
+                    <p class="bento-overlay-desc">We look at real estate as a destination story. A good project should be connected, liveable, well-planned and aligned with the way people want to live in the future.</p>
                 </div>
             </div>
             
@@ -429,9 +609,7 @@
                     <div class="promoter-info">
                         <h4>Kunal Arora</h4>
                         <p>FOUNDER & MANAGING DIRECTOR</p>
-                        <div class="promoter-socials">
-                            <a href="#">tw</a> <a href="#">in</a> <a href="#">fb</a>
-                        </div>
+
                     </div>
                 </div>
 
@@ -442,9 +620,7 @@
                     <div class="promoter-info">
                         <h4>Spice Bindal</h4>
                         <p>FOUNDER & MANAGING DIRECTOR</p>
-                        <div class="promoter-socials">
-                            <a href="#">tw</a> <a href="#">in</a> <a href="#">fb</a>
-                        </div>
+
                     </div>
                 </div>
 
@@ -456,9 +632,7 @@
                     <div class="promoter-info">
                         <h4>Jugal Arora</h4>
                         <p>FOUNDER & CHAIRMAN</p>
-                        <div class="promoter-socials">
-                            <a href="#">tw</a> <a href="#">in</a> <a href="#">fb</a>
-                        </div>
+
                     </div>
                 </div>
 
@@ -469,9 +643,7 @@
                     <div class="promoter-info">
                         <h4>Suman Bindal</h4>
                         <p>FOUNDER & CHAIRMAN</p>
-                        <div class="promoter-socials">
-                            <a href="#">tw</a> <a href="#">in</a> <a href="#">fb</a>
-                        </div>
+
                     </div>
                 </div>
             </div>
@@ -506,10 +678,10 @@
                             </div>
                         </div>
                         
-                        <a href="#" class="explore-link">
+                        <span class="explore-link explore-link--disabled" aria-label="Sold out — project no longer available" title="This project is sold out">
                             Explore Project 
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                        </a>
+                        </span>
                     </div>
                 </div>
             </div>
@@ -582,31 +754,41 @@
 
     
 
-    <!-- 16 FINAL CTA & FOOTER (FLOATING BLOCKS) -->
-    <section class="floating-cta-footer-section section-padding">
-        <div class="container">
-            <div class="cta-footer-grid">
-                
-                <!-- CTA Block -->
-                <div class="bento-card bento-card-large bento-card-dark cta-floating-block">
-                    <img src="assets/final_cta_1789570736839.jpg" alt="North Goa Sunset" class="bento-bg-img parallax-img">
-                    <div class="cta-overlay" style="background: rgba(0,0,0,0.4); position: absolute; top: 0; left: 0; right: 0; bottom: 0;"></div>
-                    <div class="cta-content" style="position: relative; z-index: 2; padding: 2rem;">
-                        <h2 class="editorial-heading text-light mb-small">Be Among the First to Know</h2>
-                        <p class="cta-desc text-light" style="font-size: 1.125rem; max-width: 600px; margin-bottom: 2rem;">A premium villa community is coming soon in North of Goa. Register your interest today to receive project updates, location details, private preview information and launch communication from FNO Global Developers.</p>
-                        <div class="cta-buttons" style="display: flex; gap: 1rem;">
-                            <button class="pill-btn-icon open-popup" style="background: var(--warm-ivory); color: var(--deep-forest-green);">
-                                Register Your Interest
-                                <span class="icon-circle" style="background: rgba(26,43,34,0.1);">
-                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                                </span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                </div>
+    <!-- 16 FINAL CTA & FOOTER -->
+    <section class="massive-cta-section" style="position: relative; height: 100vh; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between;">
+        <!-- Background Image -->
+        <div style="position: absolute; inset: 0; z-index: 1;">
+            <img src="assets/completed_project_1789570671468.jpg" alt="Building Architecture" style="width: 100%; height: 100%; object-fit: cover; object-position: center bottom;">
+        </div>
+        
+        <!-- Massive Background Text Overlay -->
+        <div class="massive-cta-bg-text" style="position: absolute; top: 15%; left: 0; width: 100%; z-index: 2; overflow: hidden; opacity: 0.85; mix-blend-mode: overlay; pointer-events: none;">
+            <div class="massive-scroll-text" style="white-space: nowrap; font-size: 18vw; font-weight: 700; color: #fff; line-height: 0.9; font-family: var(--font-sans); letter-spacing: -0.04em;">
+                BE AMONG THE FIRST TO KNOW &nbsp; BE AMONG THE FIRST TO KNOW
             </div>
+            <div class="massive-scroll-text-reverse" style="white-space: nowrap; font-size: 18vw; font-weight: 700; color: #fff; line-height: 0.9; font-family: var(--font-sans); letter-spacing: -0.04em;">
+                BE AMONG THE FIRST TO KNOW &nbsp; BE AMONG THE FIRST TO KNOW
+            </div>
+        </div>
+
+        <div style="position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(0,0,0,0) 50%, rgba(0,0,0,0.6) 100%); z-index: 3;"></div>
+
+        <!-- Top Content Layer (Optional) -->
+        <div style="position: relative; z-index: 4; padding: 2rem;">
+            <!-- Could put logo here -->
+        </div>
+
+        <!-- Bottom Content / CTA Button -->
+        <div class="container" style="position: relative; z-index: 4; padding-bottom: 4rem; text-align: center;">
+            <p class="text-light" style="font-size: 1.25rem; max-width: 600px; margin: 0 auto 2rem; opacity: 0.9; text-shadow: 0 2px 4px rgba(0,0,0,0.5);">
+                A premium villa community is coming soon in North of Goa. Register your interest today to receive project updates, location details, private preview information and launch communication from FNO Global Developers.
+            </p>
+            <button class="pill-btn-icon open-popup" style="background: var(--warm-ivory); color: var(--deep-forest-green); font-size: 1.125rem; padding: 1rem 2rem; border: none; margin: 0 auto;">
+                Register Your Interest
+                <span class="icon-circle" style="background: rgba(26,43,34,0.1);">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </span>
+            </button>
         </div>
     </section>
 
@@ -623,11 +805,11 @@
                         <a href="#">Contact</a>
                     </div>
                     <div class="footer-col">
-                        <h4>Products</h4>
-                        <a href="#">Personal Savings</a>
-                        <a href="#">Group Savings</a>
-                        <a href="#">Savings Goals</a>
-                        <a href="#">Progress Tracking</a>
+                        <h4>Quick Links</h4>
+                        <a href="#about">About Us</a>
+                        <a href="#project">Upcoming Project</a>
+                        <a href="#destination">Decoding Land</a>
+                        <a href="#faq">FAQs</a>
                     </div>
                     <div class="footer-col">
                         <h4>Resources</h4>
