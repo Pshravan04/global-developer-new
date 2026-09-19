@@ -447,7 +447,7 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 768px) {
     .slider-controls {
-        bottom: 2rem;
+        bottom: 5rem;
         right: 50%;
         transform: translateX(50%);
     }
@@ -1704,11 +1704,16 @@ h1, h2, h3, h4, h5, h6 {
     .header-nav { display: none; } /* Simplified for mobile as requested */
     
     .hero-content {
+        padding-top: 6rem;
         padding-bottom: 8rem;
     }
     
     .hero-actions {
         flex-direction: column;
+    }
+    
+    .promoters-grid-4col {
+        grid-template-columns: 1fr;
     }
     
     .fno-point {
@@ -1822,5 +1827,31 @@ h1, h2, h3, h4, h5, h6 {
     }
     .stat-value {
         font-size: 1.5rem;
+    }
+    
+    body {
+        padding-bottom: 60px;
+    }
+    
+    .bento-grid {
+        grid-template-columns: 1fr !important;
+    }
+    
+    .property-details-box {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+        padding: 2rem;
+        text-align: center;
+    }
+    
+    .completed-meta {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .promoter-block.text-block {
+        aspect-ratio: auto;
+        padding: 2rem 1.5rem;
     }
 }
