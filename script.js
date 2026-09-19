@@ -29,7 +29,9 @@ document.addEventListener("DOMContentLoaded", () => {
         gsap.from(".hero-content", { y: 50, opacity: 0, duration: 1, ease: "power3.out", delay: 0.2 });
     }
 
-    if (hasPlayed || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    // Temporarily disable hasPlayed for development so you can see the loader on refresh
+    // if (hasPlayed || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
         // Skip loader — instant reveal
         if (preloader) preloader.style.display = 'none';
         gsap.from(".hero-content", { y: 30, opacity: 0, duration: 0.8, ease: "power3.out" });
@@ -41,32 +43,32 @@ document.addEventListener("DOMContentLoaded", () => {
         let loadObj = { value: 0 };
 
         tlPre
-            .to('.preloader-logo-wrapper', { opacity: 1, scale: 1, duration: 0.5, ease: 'power3.out' }, 0.1)
-            .to('.loader-percentage', { opacity: 1, duration: 0.2 }, 0.2)
+            .to('.preloader-logo-wrapper', { opacity: 1, scale: 1, duration: 0.8, ease: 'power3.out' }, 0.2)
+            .to('.loader-percentage', { opacity: 1, duration: 0.4 }, 0.4)
             .to(loadObj, {
                 value: 100,
-                duration: 1,
+                duration: 1.5,
                 ease: 'power2.inOut',
                 onUpdate() {
                     if (percentEl) percentEl.textContent = Math.round(loadObj.value) + '%';
                 }
-            }, 0.2)
-            // Draw SVG strokes quickly
+            }, 0.4)
+            // Draw SVG strokes slowly to show trees
             .to([...palmLeaves, ...palmTrunks, ...orbitArcs], {
-                strokeDashoffset: 0, duration: 0.6, ease: 'power2.inOut', stagger: 0.02
-            }, 0.3)
-            // Fade palm + globe motifs in
-            .to([...palmEls, globeMotif], { opacity: 1, y: 0, duration: 0.4, ease: 'power2.out', stagger: 0.05 }, 0.5)
+                strokeDashoffset: 0, duration: 1.2, ease: 'power2.inOut', stagger: 0.05
+            }, 0.5)
+            // Fade palm trees + globe motifs in
+            .to([...palmEls, globeMotif], { opacity: 1, y: 0, duration: 0.8, ease: 'power2.out', stagger: 0.1 }, 0.8)
             // Horizon glow
-            .to(horizonEl, { opacity: 1, duration: 0.3, ease: 'power2.out' }, 0.6)
-            // Phase 2: Shutter exit fast
+            .to(horizonEl, { opacity: 1, duration: 0.5, ease: 'power2.out' }, 1.0)
+            // Phase 2: Shutter exit after a pause
             .to(shutterPanels, {
                 yPercent: -105,
-                duration: 0.7,
+                duration: 1.0,
                 ease: 'cubic-bezier(0.76, 0, 0.24, 1)',
-                stagger: 0.04
-            }, 1.2)
-            .call(finishLoader, null, 1.8);
+                stagger: 0.08
+            }, 2.5)
+            .call(finishLoader, null, 3.5);
     }
 
     // --------------------------------------------------------

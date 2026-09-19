@@ -271,7 +271,6 @@ h1, h2, h3, h4, h5, h6 {
 .preloader-logo {
     width: clamp(120px, 20vw, 200px);
     height: auto;
-    filter: brightness(0) invert(1);
 }
 
 .loader-percentage {
@@ -1709,6 +1708,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .sticky-scroll-container {
     display: flex;
+    align-items: flex-start;
     max-width: 1600px;
     margin: 0 auto;
     position: relative;
