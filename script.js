@@ -503,7 +503,7 @@ document.addEventListener("DOMContentLoaded", () => {
         let marqueeTween = gsap.to('.marquee-content', {
             xPercent: -50,
             ease: "none",
-            duration: 25,
+            duration: 60,
             repeat: -1
         });
         
@@ -513,9 +513,9 @@ document.addEventListener("DOMContentLoaded", () => {
             start: "top bottom",
             end: "bottom top",
             onUpdate: (self) => {
-                // Adjust time scale based on scroll velocity
+                // Adjust time scale based on scroll velocity (very subtle)
                 gsap.to(marqueeTween, {
-                    timeScale: 1 + Math.abs(self.getVelocity() / 100),
+                    timeScale: 1 + Math.abs(self.getVelocity() / 1200),
                     duration: 0.2,
                     overwrite: "auto",
                     onComplete: () => {

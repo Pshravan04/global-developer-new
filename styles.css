@@ -2068,7 +2068,7 @@ body.modal-open { overflow: hidden; }
 .marquee-section {
     padding: 3rem 0;
     overflow: hidden;
-    background-color: var(--deep-forest-green);
+    background-color: var(--charcoal);
     border-top: 1px solid rgba(252,251,249,0.1);
     border-bottom: 1px solid rgba(252,251,249,0.1);
 }

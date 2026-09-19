@@ -249,32 +249,7 @@
 
                 <!-- Right: Map Visualization -->
                 <div class="bento-card fade-up" style="padding: 0; position: relative; background-color: #EBE8E3; overflow: hidden; min-height: 400px;">
-                    <!-- Grid Pattern Overlay -->
-                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: linear-gradient(rgba(26, 60, 52, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(26, 60, 52, 0.05) 1px, transparent 1px); background-size: 40px 40px;"></div>
-                    
-                    <svg class="goa-map-svg" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid meet" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
-                        <!-- Abstract coastline contour -->
-                        <path class="coastline" d="M -50 50 C 150 80, 250 150, 200 350 C 180 450, 250 550, 300 650" fill="none" stroke="var(--muted-olive)" stroke-width="2" stroke-opacity="0.3"/>
-                        <!-- Route line -->
-                        <path id="routeLine" class="route-line" d="M 50 150 C 250 150, 350 250, 320 400" fill="none" stroke="var(--muted-gold)" stroke-width="4" stroke-dasharray="8 8"/>
-                        
-                        <!-- Pulse Effect Group -->
-                        <g transform="translate(320, 400)">
-                            <circle class="pulse-ring" cx="0" cy="0" r="15" fill="var(--subtle-terracotta)" opacity="0.3">
-                                <animate attributeName="r" from="10" to="40" dur="2s" repeatCount="indefinite"/>
-                                <animate attributeName="opacity" from="0.5" to="0" dur="2s" repeatCount="indefinite"/>
-                            </circle>
-                            <circle class="location-pin" cx="0" cy="0" r="8" fill="var(--subtle-terracotta)" />
-                        </g>
-
-                        <!-- Labels -->
-                        <g transform="translate(350, 395)">
-                            <text x="0" y="0" style="font-family: var(--font-serif); font-size: 24px; font-weight: bold; fill: var(--deep-forest-green);">NORTH OF GOA</text>
-                            <text x="0" y="22" style="font-family: var(--font-sans); font-size: 14px; font-weight: bold; letter-spacing: 2px; fill: var(--subtle-terracotta);">COMING SOON</text>
-                            <rect x="0" y="32" width="60" height="24" rx="12" fill="var(--charcoal)"/>
-                            <text x="30" y="49" text-anchor="middle" style="font-family: var(--font-sans); font-size: 12px; font-weight: bold; fill: #fff;">NH-66</text>
-                        </g>
-                    </svg>
+                    <iframe src="https://maps.google.com/maps?q=15.9325609,73.7534561&hl=en&z=15&output=embed" width="100%" height="100%" style="border:0; position: absolute; top: 0; left: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </div>
@@ -369,6 +344,12 @@
                     <div class="block fade-up">
                         <p>The region's rich heritage, thriving gastronomy, and growing MICE (Meetings, Incentives, Conferences, and Exhibitions) sector are reshaping its lifestyle appeal.</p>
                     </div>
+                    <div class="block fade-up">
+                        <p>The newly inaugurated Mopa Airport (Manohar International Airport) has vastly improved global and domestic connectivity, making North Goa more accessible than ever before.</p>
+                    </div>
+                    <div class="block fade-up">
+                        <p>Significant infrastructure upgrades, including the expansion of NH-66, are reducing travel times and transforming the region into an organized real estate hub for premium developments.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -401,13 +382,19 @@
                         <span class="detail-label">Type</span>
                         <span class="detail-value">Premium Villa Community</span>
                     </div>
-                    <div class="property-actions">
+                    <div class="property-actions" style="display: flex; gap: 1rem; flex-wrap: wrap;">
                         <button class="pill-btn-icon open-popup">
                             Register Early Interest 
                             <span class="icon-circle">
                                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                             </span>
                         </button>
+                        <a href="https://maps.app.goo.gl/7BNyK5dZh6GrxSGq6" target="_blank" rel="noopener noreferrer" class="pill-btn-icon" style="background: transparent; color: var(--forest-green); border: 1px solid var(--forest-green);">
+                            Strategic Location
+                            <span class="icon-circle" style="background: var(--forest-green); color: white;">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            </span>
+                        </a>
                     </div>
                 </div>
             </div>
