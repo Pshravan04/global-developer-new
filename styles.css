@@ -1781,7 +1781,7 @@ h1, h2, h3, h4, h5, h6 {
 .scroll-number {
     font-family: var(--font-sans);
     font-size: 4rem;
-    color: var(--soft-gold);
+    color: var(--muted-olive);
     margin-bottom: 1rem;
     line-height: 1;
 }
@@ -1792,13 +1792,14 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.1;
     margin-bottom: 1.5rem;
     font-weight: 400;
+    color: var(--deep-forest-green);
 }
 
 .scroll-desc {
     font-family: var(--font-sans);
     font-size: 1.2rem;
     line-height: 1.6;
-    color: rgba(255, 248, 240, 0.8);
+    color: var(--deep-forest-green);
     max-width: 450px;
 }
 
@@ -2144,16 +2145,16 @@ body.modal-open { overflow: hidden; }
     transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-/* Glassmorphism for Location sticky text */
+/* Glassmorphism for Location sticky text - Light version */
 .scrolling-point {
-    background: rgba(31, 46, 36, 0.65);
+    background: rgba(254, 253, 208, 0.85); /* Cream translucent */
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255,255,255,0.05);
+    border: 1px solid rgba(17, 71, 15, 0.1); /* Subtle dark border */
     padding: 3rem !important;
     border-radius: 12px;
     margin-bottom: 2rem;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
 /* ==========================================================================
