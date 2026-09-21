@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxe Heaven Villas | FNO Global Developers</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="property-styles.css">
+</head>
+<body class="property-page-body">
+
+    <!-- HEADER (Matching index.html structure to fix the giant green overlay issue) -->
+    <header id="header" class="site-header">
+        <div class="header-inner">
+            <div class="header-left">
+                <a href="index.html" class="logo-link">
+                    <img src="FNO LOGO MAIN.png" alt="FNO Global Developers" class="nav-logo-img">
+                    <span class="logo-text">FNO Global Developer</span>
+                </a>
+            </div>
+            <nav class="header-nav" id="desktop-nav" aria-label="Main navigation">
+                <ul>
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="index.html#about">About Us</a></li>
+                    <li><a href="index.html#project">Projects</a></li>
+                    <li><a href="index.html#destination">Decoding Land</a></li>
+                    <li><a href="index.html#faq">FAQs</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-right">
+                <button class="pill-btn open-popup" onclick="document.getElementById('enquiry-popup').showModal()">Register Your Interest</button>
+                <button class="hamburger" id="menu-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        
+        <!-- Breadcrumb & Container -->
+        <div class="property-container">
+            <div class="property-breadcrumb">
+                <a href="index.html">Home</a> <span>/</span> 
+                <a href="index.html#project">Completed Projects</a> <span>/</span> 
+                Luxe Heaven Villas
+            </div>
+
+            <div class="hero-header-text">
+                <h1>Luxe Heaven Villas</h1>
+                <div class="hero-meta">Porvorim, North Goa • By FNO Global Developers</div>
+            </div>
+
+            <!-- 1 & 2. HERO / OVERVIEW & GALLERY -->
+            <div class="hero-overview-grid">
+                <div class="hero-content">
+                    <div class="hero-image-wrapper">
+                        <img id="main-hero-img" src="assets/villa/luxe-heaven-villa-2.jpeg" alt="Luxe Heaven Villas Exterior">
+                    </div>
+                    <div class="hero-thumbnails">
+                        <img src="assets/villa/luxe-heaven-villa-2.jpeg" alt="Thumb 1" class="thumb active" onclick="updateHeroImage(this)">
+                        <img src="assets/villa/luxe-heaven-villa-1.jpeg" alt="Thumb 2" class="thumb" onclick="updateHeroImage(this)">
+                        <img src="assets/villa/luxe-heaven-villa-3.jpeg" alt="Thumb 3" class="thumb" onclick="updateHeroImage(this)">
+                        <img src="assets/villa/luxe-heaven-villa-4.jpeg" alt="Thumb 4" class="thumb" onclick="updateHeroImage(this)">
+                        <img src="assets/villa/luxe-heaven-villa-5.jpeg" alt="Thumb 5" class="thumb" onclick="updateHeroImage(this)">
+                    </div>
+                </div>
+                
+                <div class="hero-sidebar-container">
+                    <div class="hero-sidebar">
+                        <span class="price-label">Starting Price</span>
+                        <h2 class="hero-price">Price on Request</h2>
+                        <div class="hero-specs">
+                            <div class="hero-spec-item">
+                                <span>Configuration</span>
+                                <strong>3+1 BHK Villa</strong>
+                            </div>
+                            <div class="hero-spec-item">
+                                <span>Plot Area</span>
+                                <strong>585 Sqm</strong>
+                            </div>
+                            <div class="hero-spec-item">
+                                <span>Possession</span>
+                                <strong>Immediate</strong>
+                            </div>
+                        </div>
+                        <div class="hero-actions">
+                            <button class="pill-btn open-popup" style="width:100%; justify-content:center;" onclick="document.getElementById('enquiry-popup').showModal()">ENQUIRE NOW</button>
+                            <!-- Using the brand's secondary button style or mimicking pill-btn but transparent -->
+                            <button class="pill-btn-outline open-popup" style="width:100%; justify-content:center; background: transparent; border: 1px solid var(--deep-forest-green); color: var(--deep-forest-green); border-radius: 50px; padding: 0.75rem 1.5rem; font-weight: 500; font-family: var(--font-sans); cursor: pointer; transition: var(--transition-smooth);" onclick="document.getElementById('enquiry-popup').showModal()">Download Brochure</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 3. KEY PROPERTY FACTS (Directly Underneath) -->
+            <div class="facts-grid">
+                <div class="fact-card">
+                    <span class="fact-val">585</span>
+                    <span class="fact-label">Sqm Plot</span>
+                </div>
+                <div class="fact-card">
+                    <span class="fact-val">3+1</span>
+                    <span class="fact-label">BHK Villa</span>
+                </div>
+                <div class="fact-card">
+                    <span class="fact-val">Immediate</span>
+                    <span class="fact-label">Possession</span>
+                </div>
+                <div class="fact-card">
+                    <span class="fact-val">2</span>
+                    <span class="fact-label">Luxury Villas</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4. PROJECT DESCRIPTION -->
+        <section class="property-section">
+            <div class="property-container">
+                <h2 class="sec-heading">ABOUT THE PROJECT</h2>
+                <div class="desc-content">
+                    <p class="desc-intro">Presenting two ultra-luxurious, fully furnished European-style villas in the prime location of Pehn de Franc, Porvorim.</p>
+                    <p>Designed for those who seek uncompromising luxury, Luxe Heaven Villas sit majestically on a 585 Sqm plot. Every inch of this property has been carefully curated to deliver a private resort experience, combining the timeless elegance of European architecture with the vibrant soul of North Goa.</p>
+                    <p>From the private Otis elevator and state-of-the-art smart home security to a dedicated luxury home theatre and stunning bar setups, this is a home built for exceptional living and grand entertaining.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. PROJECT HIGHLIGHTS / USPs -->
+        <section class="property-section">
+            <div class="property-container">
+                <h2 class="sec-heading">PROJECT HIGHLIGHTS</h2>
+                <p class="sec-subheading">Unmatched amenities and smart-home features.</p>
+                <div class="usps-grid">
+                    <div class="usp-card">
+                        <div class="usp-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                        </div>
+                        <div class="usp-content">
+                            <h4>Private Lift</h4>
+                            <p>Premium Otis elevator ensuring seamless access across all levels of your villa.</p>
+                        </div>
+                    </div>
+                    <div class="usp-card">
+                        <div class="usp-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                        </div>
+                        <div class="usp-content">
+                            <h4>Entertainment Hub</h4>
+                            <p>Featuring 4 stunning bars and a luxury home theatre on the terrace.</p>
+                        </div>
+                    </div>
+                    <div class="usp-card">
+                        <div class="usp-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                        </div>
+                        <div class="usp-content">
+                            <h4>Smart & Secure</h4>
+                            <p>Equipped with CCTV, digital access locks, and advanced motion sensors.</p>
+                        </div>
+                    </div>
+                    <div class="usp-card">
+                        <div class="usp-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+                        </div>
+                        <div class="usp-content">
+                            <h4>Fully Loaded</h4>
+                            <p>Comes with ACs, TVs, refrigerators, microwaves, washing machines, and premium Kohler fittings.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6 & 7. CONFIGURATION, PRICING & FLOOR PLANS -->
+        <section class="property-section dark-section">
+            <div class="property-container">
+                <h2 class="sec-heading" style="color: var(--warm-ivory);">CONFIGURATION & FLOOR PLANS</h2>
+                <p class="sec-subheading" style="color: rgba(254,253,208,0.7);">Discover the layout of your new luxury home.</p>
+                
+                <div class="config-card">
+                    <div class="config-info">
+                        <h3>3+1 BHK European Villa</h3>
+                        <p>585 Sqm Plot Area | Fully Furnished</p>
+                    </div>
+                    <div class="config-price">
+                        <span class="price">Price on Request</span>
+                        <button class="pill-btn open-popup" onclick="document.getElementById('enquiry-popup').showModal()">Enquire Now</button>
+                    </div>
+                </div>
+
+                <div class="floorplan-container">
+                    <h3>Typical Floor Plan</h3>
+                    <p>To view detailed blueprints and architectural layouts, please request the brochure.</p>
+                    <button class="pill-btn open-popup" style="background:var(--subtle-terracotta); color:var(--deep-forest-green);" onclick="document.getElementById('enquiry-popup').showModal()">Request Floor Plans</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. AMENITIES -->
+        <section class="property-section">
+            <div class="property-container">
+                <h2 class="sec-heading">RESORT-STYLE AMENITIES</h2>
+                <p class="sec-subheading">Curated lifestyle features within your private estate.</p>
+                <div class="amenities-list">
+                    <div class="amenity-line"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg> Massive Swimming Pool</div>
+                    <div class="amenity-line"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg> Dubai-Style Gazebo</div>
+                    <div class="amenity-line"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg> Open Air Party Space</div>
+                    <div class="amenity-line"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg> Dancing Ramp</div>
+                    <div class="amenity-line"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg> Gymnasium</div>
+                    <div class="amenity-line"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg> Garden Theme Lighting</div>
+                    <div class="amenity-line"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg> Music System & Deck</div>
+                    <div class="amenity-line"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg> Shower Room</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 10. PROJECT GALLERY / LIFESTYLE -->
+        <section class="property-section">
+            <div class="property-container">
+                <h2 class="sec-heading">LIFESTYLE GALLERY</h2>
+                <div class="masonry-gallery">
+                    <div class="masonry-item wide"><img src="assets/villa/luxe-heaven-villa-2.jpeg" alt="Exterior"></div>
+                    <div class="masonry-item"><img src="assets/villa/luxe-heaven-villa-4.jpeg" alt="Pool Area"></div>
+                    <div class="masonry-item tall"><img src="assets/villa/luxe-heaven-villa-5.jpeg" alt="Living"></div>
+                    <div class="masonry-item"><img src="assets/villa/luxe-heaven-villa-1.jpeg" alt="Dining"></div>
+                    <div class="masonry-item"><img src="assets/villa/luxe-heaven-villa-3.jpeg" alt="Bedroom"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. LOCATION / CONNECTIVITY -->
+        <section class="property-section">
+            <div class="property-container">
+                <div class="location-grid">
+                    <div>
+                        <h2 class="sec-heading">LOCATION</h2>
+                        <p class="sec-subheading" style="margin-bottom:1.5rem; color: var(--deep-forest-green);">Pehn de Franc, Porvorim, North Goa</p>
+                        <p class="desc-content">Nestled in the prestigious neighborhood of Porvorim, Luxe Heaven Villas offer the perfect balance of serene living while remaining intimately connected to the vibrant lifestyle, beaches, and culinary hotspots of North Goa.</p>
+                        <ul class="connectivity-list">
+                            <li><span>Mall De Goa</span> <span>5 Mins</span></li>
+                            <li><span>Panjim City</span> <span>10 Mins</span></li>
+                            <li><span>Calangute Beach</span> <span>15 Mins</span></li>
+                            <li><span>Mopa Airport</span> <span>45 Mins</span></li>
+                        </ul>
+                    </div>
+                    <div class="location-map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15383.674932060163!2d73.834856!3d15.521301!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbfc1d560bb6399%3A0xc3408a2ba14a8b79!2sPorvorim%2C%20Penha%20de%20Fran%C3%A7a%2C%20Goa!5e0!3m2!1sen!2sin!4v1714000000000!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 11. DEVELOPER / BUILDER SECTION -->
+        <section class="property-section dark-section">
+            <div class="property-container">
+                <div class="developer-card">
+                    <img src="assets/KUNAL.png" alt="Kunal Arora" class="dev-logo-avatar">
+                    <div class="dev-info">
+                        <h3 style="color: var(--deep-forest-green); font-family: var(--font-serif); font-size: 2rem; margin-bottom: 0.25rem;">Kunal Arora</h3>
+                        <h4 style="color: var(--muted-olive); font-size: 1rem; margin-bottom: 1rem;">Founder & Managing Director, FNO Global Developers</h4>
+                        <p style="color: var(--deep-forest-green); line-height: 1.6;">A young entrepreneur with a global outlook and experience working with international clients across diverse markets. Driven by vision, ambition, and a global standard of excellence, FNO Global Developers is committed to delivering premium living spaces that exceed expectations.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 13. FAQ -->
+        <section class="property-section">
+            <div class="property-container">
+                <h2 class="sec-heading" style="text-align: center;">FREQUENTLY ASKED QUESTIONS</h2>
+                <div class="faq-accordion">
+                    <div class="faq-item">
+                        <button class="faq-header" onclick="toggleFaq(this)">Where is the project located? <span>+</span></button>
+                        <div class="faq-content">Luxe Heaven Villas is located in the premium residential neighborhood of Pehn de Franc, Porvorim, North Goa.</div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-header" onclick="toggleFaq(this)">What configurations are available? <span>+</span></button>
+                        <div class="faq-content">We are offering two exclusive 3 Bedroom + 1 Servant Room villas built on a generous 585 Sqm plot.</div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-header" onclick="toggleFaq(this)">Is the villa fully furnished? <span>+</span></button>
+                        <div class="faq-content">Yes, the villas come fully loaded with ACs, TVs, refrigerators, microwaves, washing machines, German concept wardrobes, and Kohler fittings.</div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-header" onclick="toggleFaq(this)">What is the possession timeline? <span>+</span></button>
+                        <div class="faq-content">The villas are ready for immediate possession.</div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-header" onclick="toggleFaq(this)">How can I schedule a site visit? <span>+</span></button>
+                        <div class="faq-content">You can schedule a site visit by clicking the "Enquire Now" button on this page and filling out the brief form, or by contacting us directly at our phone number.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 14. LEAD GENERATION CTA -->
+        <section class="property-section" style="padding-bottom: 6rem;">
+            <div class="property-container">
+                <div class="final-cta-banner">
+                    <h2>Interested in Luxe Heaven Villas?</h2>
+                    <p>Get complete pricing, floor plans, availability, and schedule a private tour.</p>
+                    <button class="pill-btn open-popup" style="background:var(--deep-forest-green); color:var(--warm-ivory);" onclick="document.getElementById('enquiry-popup').showModal()">Request Project Details</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 16. STICKY MOBILE CTA -->
+    <div class="sticky-mobile-cta">
+        <a href="tel:+919876543210" class="btn-call">Call</a>
+        <a href="https://wa.me/919876543210" class="btn-whatsapp">WhatsApp</a>
+        <button class="btn-call open-popup" onclick="document.getElementById('enquiry-popup').showModal()" style="background:var(--charcoal);">Enquire</button>
+    </div>
+
+    <!-- FOOTER -->
+    <footer id="contact" class="footer-advanced">
+        <div class="footer-container">
+            <div class="footer-top-grid">
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <a href="#">About us</a>
+                    <a href="#">Careers</a>
+                    <a href="#">FAQs</a>
+                    <a href="#">Contact</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <a href="index.html#about">About Us</a>
+                    <a href="index.html#project">Upcoming Project</a>
+                    <a href="index.html#destination">Decoding Land</a>
+                    <a href="index.html#faq">FAQs</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <a href="#">Blog</a>
+                    <a href="#">Newsletter</a>
+                    <a href="#">Media</a>
+                    <a href="#">White paper</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <a href="#">Privacy</a>
+                    <a href="#">Security</a>
+                    <a href="#">Terms of use</a>
+                    <a href="#">Acceptance policy</a>
+                    <a href="#">Cookies</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <a href="#">support@fnoglobal.com</a>
+                    <a href="#">+91 98765 43210</a>
+                    <a href="#">1800-FNO-GLOBAL</a>
+                </div>
+            </div>
+
+            <div class="footer-divider"></div>
+
+            <div class="footer-bottom-info">
+                <div class="footer-copyright-info">
+                    <p><strong>FNO GLOBAL DEVELOPERS (FOCUSSED NATIONWIDE OPPORTUNITIES)</strong></p>
+                    <p>Headquarters: Sector 62, Noida | Offices: Delhi & Goa</p>
+                    <p>&copy; 2026 FNO Global Developers. All rights reserved.</p>
+                </div>
+                <div class="footer-socials">
+                    <a href="#" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+                    <a href="#" aria-label="X (Twitter)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l11.733 16h4.267l-11.733 -16z"></path><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path></svg></a>
+                    <a href="#" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+                    <a href="#" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-massive-text">
+            FNO GLOBAL
+            <div class="massive-text-fade"></div>
+        </div>
+    </footer>
+
+    <!-- POPUP FORM -->
+    <dialog id="enquiry-popup" class="popup-modal">
+        <div class="popup-layout">
+            <div class="popup-image">
+                <img src="assets/lifestyle_editorial_1789570447335.jpg" alt="Premium Living">
+            </div>
+            <div class="popup-content">
+                <button class="close-popup" onclick="document.getElementById('enquiry-popup').close()">&times;</button>
+                <div class="popup-header">
+                    <h3 class="popup-heading">Get Project Details</h3>
+                    <p class="popup-subheading">Enter your details to receive pricing, floor plans, and availability.</p>
+                </div>
+                
+                <form class="enquiry-form">
+                    <div class="form-row">
+                        <div class="form-group floating">
+                            <input type="text" id="fullName" placeholder=" " required>
+                            <label for="fullName">Full Name</label>
+                        </div>
+                        <div class="form-group floating">
+                            <input type="tel" id="phone" placeholder=" " required>
+                            <label for="phone">Phone Number</label>
+                        </div>
+                    </div>
+                    <div class="form-group floating">
+                        <input type="email" id="email" placeholder=" " required>
+                        <label for="email">Email Address</label>
+                    </div>
+                    <div class="form-group floating">
+                        <select id="interestedIn" required>
+                            <option value="" disabled selected hidden></option>
+                            <option value="3bhk">3+1 BHK Villa</option>
+                            <option value="other">Other Configuration</option>
+                        </select>
+                        <label for="interestedIn">Preferred Configuration</label>
+                    </div>
+                    <div class="form-group floating">
+                        <textarea id="message" placeholder=" " style="min-height: 80px;"></textarea>
+                        <label for="message">Message (Optional)</label>
+                    </div>
+                    <button type="submit" class="pill-btn-icon full-width" style="justify-content: center; margin-top: 1rem;">
+                        Get Project Details
+                        <span class="icon-circle">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </dialog>
+
+    <script src="script.js"></script>
+    <script>
+        // Hero Image Thumbnail Swapper
+        function updateHeroImage(element) {
+            document.getElementById('main-hero-img').src = element.src;
+            document.querySelectorAll('.thumb').forEach(t => t.classList.remove('active'));
+            element.classList.add('active');
+        }
+
+        // Simple FAQ Accordion Toggle
+        function toggleFaq(button) {
+            const item = button.parentElement;
+            const isActive = item.classList.contains('active');
+            
+            // Close all
+            document.querySelectorAll('.faq-item').forEach(i => {
+                i.classList.remove('active');
+                i.querySelector('span').innerText = '+';
+            });
+
+            // Open clicked if it wasn't already active
+            if (!isActive) {
+                item.classList.add('active');
+                button.querySelector('span').innerText = '-';
+            }
+        }
+    </script>
+</body>
+</html>

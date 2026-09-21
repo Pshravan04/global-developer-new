@@ -7,7 +7,7 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <meta name="description" content="FNO Global Developers — Premium real estate investment opportunities in North Goa. Led by experience, driven by a new vision of coastal living.">
     <!-- Preload logo to prevent pop-in during cinematic loader -->
     <link rel="preload" href="FNO LOGO MAIN.png" as="image">
@@ -87,6 +87,7 @@
             <div class="header-left">
                 <a href="#home" class="logo-link">
                     <img src="FNO LOGO MAIN.png" alt="FNO Global Developers" class="nav-logo-img">
+                    <span class="logo-text">FNO Global Developer</span>
                 </a>
             </div>
             <nav class="header-nav" id="desktop-nav" aria-label="Main navigation">
@@ -195,7 +196,7 @@
     </section>
 
     <!-- 03C CREATIVE MARQUEE -->
-    <section class="marquee-section dark-section">
+    <section class="marquee-section">
         <div class="marquee-wrapper">
             <div class="marquee-content">
                 <span>LUXURY REDEFINED</span>
@@ -231,8 +232,8 @@
         <div class="container">
             <div class="bento-grid" style="grid-template-columns: 1fr 1.5fr;">
                 <!-- Left: Information -->
-                <div class="bento-card bento-card-light fade-up" style="display: flex; flex-direction: column; justify-content: center;">
-                    <h2 class="editorial-heading" style="font-size: 2.5rem; margin-bottom: 1rem;">Strategic<br>Location</h2>
+                <div class="bento-card bento-card-light fade-up" style="display: flex; flex-direction: column; justify-content: flex-start; padding: 3rem; min-height: max-content; overflow: visible;">
+                    <h2 class="editorial-heading" style="font-size: 2.5rem; margin-bottom: 1rem;">Strategic Location</h2>
                     <p class="card-desc" style="font-size: 1.125rem; margin-bottom: 2rem;">Positioned along the vibrant NH-66 corridor, ensuring rapid connectivity to major transport hubs and lifestyle destinations.</p>
                     
                     <div style="display: flex; flex-direction: column; gap: 1rem;">
@@ -244,12 +245,16 @@
                             <div style="width: 12px; height: 12px; border-radius: 50%; background-color: var(--muted-gold);"></div>
                             <span style="font-size: 1rem; color: var(--charcoal); font-weight: 500;">Rapid Airport Connectivity</span>
                         </div>
+                        <div style="display: flex; align-items: center; gap: 1rem; padding-bottom: 1rem; border-bottom: 1px solid rgba(26,60,52,0.1);">
+                            <div style="width: 12px; height: 12px; border-radius: 50%; background-color: var(--muted-olive);"></div>
+                            <span style="font-size: 1rem; color: var(--charcoal); font-weight: 500;">NH-66 North Goa</span>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Right: Map Visualization -->
                 <div class="bento-card fade-up" style="padding: 0; position: relative; background-color: #EBE8E3; overflow: hidden; min-height: 400px;">
-                    <iframe src="https://maps.google.com/maps?q=15.9325609,73.7534561&hl=en&z=15&output=embed" width="100%" height="100%" style="border:0; position: absolute; top: 0; left: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe src="https://maps.google.com/maps?q=15.9325609,73.7534561+(Upcoming%20Project)&hl=en&z=18&output=embed" width="100%" height="100%" style="border:0; position: absolute; top: 0; left: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </div>
@@ -364,37 +369,107 @@
                 <h2 class="editorial-heading">A Premium Villa Community<br>with Direct NH-66 Connectivity</h2>
             </div>
             
-            <div class="property-card-large fade-up">
-                <div class="property-img-wrapper">
-                    <img src="assets/project_visual_1789570410039.jpg" alt="Premium Villa Community" class="property-img parallax-img">
-                </div>
-                
-                <div class="property-details-box">
-                    <div class="detail-item">
-                        <span class="detail-label">Status</span>
-                        <span class="detail-value">Coming Soon</span>
+            <!-- New Property Grid Layout -->
+            <div class="upcoming-projects-grid">
+                <!-- Upcoming Villa Community -->
+                <div class="property-card-new fade-up" style="transition-delay: 0.1s;">
+                    <div class="property-card-bg">
+                        <img src="assets/project_visual_1789570410039.jpg" alt="Upcoming Villa Community">
                     </div>
-                    <div class="detail-item">
-                        <span class="detail-label">Location</span>
-                        <span class="detail-value">Opposite Aradhya Cinema, NH-66</span>
-                    </div>
-                    <div class="detail-item">
-                        <span class="detail-label">Type</span>
-                        <span class="detail-value">Premium Villa Community</span>
-                    </div>
-                    <div class="property-actions" style="display: flex; gap: 1rem; flex-wrap: wrap;">
-                        <button class="pill-btn-icon open-popup">
-                            Register Early Interest 
-                            <span class="icon-circle">
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                            </span>
+                    
+                    <div class="property-card-header">
+                        <span class="property-badge">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                            Residential
+                        </span>
+                        <button class="property-like-btn">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
                         </button>
-                        <a href="https://maps.app.goo.gl/7BNyK5dZh6GrxSGq6" target="_blank" rel="noopener noreferrer" class="pill-btn-icon" style="background: transparent; color: var(--forest-green); border: 1px solid var(--forest-green);">
-                            Strategic Location
-                            <span class="icon-circle" style="background: var(--forest-green); color: white;">
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    </div>
+                    
+                    <div class="property-card-content-overlay">
+                        <h3 class="property-title">Upcoming Villa Community</h3>
+                        
+                        <div class="property-amenities">
+                            <span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                                Coming Soon
                             </span>
-                        </a>
+                            <span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                                North Goa
+                            </span>
+                        </div>
+                        
+                        <button class="property-btn-outline open-popup">More Details</button>
+                    </div>
+                </div>
+
+                <!-- Commercial Space -->
+                <div class="property-card-new fade-up" style="transition-delay: 0.2s;">
+                    <div class="property-card-bg">
+                        <img src="assets/project_visual_1789570410039.jpg" alt="Commercial Space">
+                    </div>
+                    
+                    <div class="property-card-header">
+                        <span class="property-badge">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"/><line x1="9" y1="22" x2="15" y2="22"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="10" x2="16" y2="10"/><line x1="8" y1="14" x2="16" y2="14"/></svg>
+                            Commercial
+                        </span>
+                        <button class="property-like-btn">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                        </button>
+                    </div>
+                    
+                    <div class="property-card-content-overlay">
+                        <h3 class="property-title">Commercial Space</h3>
+                        
+                        <div class="property-amenities">
+                            <span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                                Coming Soon
+                            </span>
+                            <span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                                Highway Front
+                            </span>
+                        </div>
+                        
+                        <button class="property-btn-outline open-popup">More Details</button>
+                    </div>
+                </div>
+
+                <!-- Upcoming Apartments -->
+                <div class="property-card-new fade-up" style="transition-delay: 0.3s;">
+                    <div class="property-card-bg">
+                        <img src="assets/project_visual_1789570410039.jpg" alt="Upcoming Apartments">
+                    </div>
+                    
+                    <div class="property-card-header">
+                        <span class="property-badge">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                            Residential
+                        </span>
+                        <button class="property-like-btn">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                        </button>
+                    </div>
+                    
+                    <div class="property-card-content-overlay">
+                        <h3 class="property-title">Upcoming Apartments</h3>
+                        
+                        <div class="property-amenities">
+                            <span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                                Coming Soon
+                            </span>
+                            <span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                                Prime Location
+                            </span>
+                        </div>
+                        
+                        <button class="property-btn-outline open-popup">More Details</button>
                     </div>
                 </div>
             </div>
@@ -538,53 +613,107 @@
     <section class="promoters-section section-padding">
         <div class="container">
             <h2 class="editorial-heading text-center mb-large">Led by Experience.<br>Driven by a New Vision.</h2>
-                      <div class="promoters-grid-4col">
-                <!-- Row 1: Kunal & Spice -->
-                <div class="promoter-block image-block">
-                    <img src="assets/KUNAL .png" alt="Kunal Arora" class="promoter-img">
-                </div>
-                <div class="promoter-block text-block bg-light">
-                    <div class="promoter-info">
-                        <h4>Kunal Arora</h4>
-                        <p>FOUNDER & MANAGING DIRECTOR</p>
-
+                      <div class="leaders-marquee-wrapper mt-large">
+            <div class="leaders-marquee-track">
+                <!-- Original Set -->
+                <div class="leader-card">
+                    <div class="leader-card-image">
+                        <img src="assets/KUNAL.png" alt="Kunal Arora">
+                    </div>
+                    <div class="leader-card-content bg-light">
+                        <h4 class="leader-name">Kunal Arora</h4>
+                        <p class="leader-title">Founder & Managing Director</p>
+                        <p class="leader-desc">A young entrepreneur with a global outlook and experience working with international clients across diverse markets. Founder of multiple ventures spanning India and international markets, Kunal Arora represents a new generation of leadership—driven by vision, ambition, and a global standard of excellence.</p>
+                        <blockquote class="leader-quote">“A vision beyond borders, driven by ambition, built for global growth.”</blockquote>
                     </div>
                 </div>
 
-                <div class="promoter-block image-block">
-                    <img src="assets/SPICE BINDAL .png" alt="Spice Bindal" class="promoter-img">
-                </div>
-                <div class="promoter-block text-block bg-light">
-                    <div class="promoter-info">
-                        <h4>Spice Bindal</h4>
-                        <p>FOUNDER & MANAGING DIRECTOR</p>
-
+                <div class="leader-card">
+                    <div class="leader-card-image">
+                        <img src="assets/SPICE BINDAL.png" alt="Spice Bindal">
+                    </div>
+                    <div class="leader-card-content bg-light">
+                        <h4 class="leader-name">Spice Bindal</h4>
+                        <p class="leader-title">Founder & Managing Director</p>
+                        <p class="leader-desc">With extensive experience in the construction industry and a strong track record of working with international clients, Spice Bindal brings a refined understanding of execution, quality, and global standards. His leadership is driven by precision, integrity, and a commitment to delivering developments built to exceptional standards.</p>
+                        <blockquote class="leader-quote">“Global standards begin with a vision for excellence and the discipline to deliver it.”</blockquote>
                     </div>
                 </div>
 
-                <!-- Row 2: Jugal & Suman -->
-                <div class="promoter-block image-block">
-                    <img src="assets/JUGAL ARORA .png" alt="Jugal Arora" class="promoter-img">
-                </div>
-                <div class="promoter-block text-block bg-light">
-                    <div class="promoter-info">
-                        <h4>Jugal Arora</h4>
-                        <p>FOUNDER & CHAIRMAN</p>
-
+                <div class="leader-card">
+                    <div class="leader-card-image">
+                        <img src="assets/JUGAL ARORA.png" alt="Jugal Arora">
+                    </div>
+                    <div class="leader-card-content bg-light">
+                        <h4 class="leader-name">Jugal Arora</h4>
+                        <p class="leader-title">Founder & Chairman</p>
+                        <p class="leader-desc">With over 30 years of experience in real estate, Jugal Arora brings a distinguished perspective shaped by decades of expertise, entrepreneurial leadership, and strategic insight. His experience extends across real estate, stock markets, and the food industry, with a strong understanding of investments, business, and value creation. His vision is rooted in building ventures defined by trust, quality, and enduring value.</p>
+                        <blockquote class="leader-quote">“Our ambition is not to follow benchmarks, but to set them.”</blockquote>
                     </div>
                 </div>
 
-                <div class="promoter-block image-block">
-                    <img src="assets/SUMAN BINDAL.png" alt="Suman Bindal" class="promoter-img">
+                <div class="leader-card">
+                    <div class="leader-card-image">
+                        <img src="assets/SUMAN BINDAL.png" alt="Suman Bindal">
+                    </div>
+                    <div class="leader-card-content bg-light">
+                        <h4 class="leader-name">Suman Bindal</h4>
+                        <p class="leader-title">Founder & Chairman</p>
+                        <p class="leader-desc">With over 30 years of distinguished experience in luxury and high-end construction, Suman Bindal brings exceptional expertise in craftsmanship, execution, and uncompromising quality. His experience reflects a deep understanding of creating spaces defined by precision, sophistication, and enduring value.</p>
+                        <blockquote class="leader-quote">“True luxury lies in the details that stand the test of time.”</blockquote>
+                    </div>
                 </div>
-                <div class="promoter-block text-block bg-light">
-                    <div class="promoter-info">
-                        <h4>Suman Bindal</h4>
-                        <p>FOUNDER & CHAIRMAN</p>
 
+                <!-- Duplicate Set for Infinite Scroll -->
+                <div class="leader-card">
+                    <div class="leader-card-image">
+                        <img src="assets/KUNAL.png" alt="Kunal Arora">
+                    </div>
+                    <div class="leader-card-content bg-light">
+                        <h4 class="leader-name">Kunal Arora</h4>
+                        <p class="leader-title">Founder & Managing Director</p>
+                        <p class="leader-desc">A young entrepreneur with a global outlook and experience working with international clients across diverse markets. Founder of multiple ventures spanning India and international markets, Kunal Arora represents a new generation of leadership—driven by vision, ambition, and a global standard of excellence.</p>
+                        <blockquote class="leader-quote">“A vision beyond borders, driven by ambition, built for global growth.”</blockquote>
+                    </div>
+                </div>
+
+                <div class="leader-card">
+                    <div class="leader-card-image">
+                        <img src="assets/SPICE BINDAL.png" alt="Spice Bindal">
+                    </div>
+                    <div class="leader-card-content bg-light">
+                        <h4 class="leader-name">Spice Bindal</h4>
+                        <p class="leader-title">Founder & Managing Director</p>
+                        <p class="leader-desc">With extensive experience in the construction industry and a strong track record of working with international clients, Spice Bindal brings a refined understanding of execution, quality, and global standards. His leadership is driven by precision, integrity, and a commitment to delivering developments built to exceptional standards.</p>
+                        <blockquote class="leader-quote">“Global standards begin with a vision for excellence and the discipline to deliver it.”</blockquote>
+                    </div>
+                </div>
+
+                <div class="leader-card">
+                    <div class="leader-card-image">
+                        <img src="assets/JUGAL ARORA.png" alt="Jugal Arora">
+                    </div>
+                    <div class="leader-card-content bg-light">
+                        <h4 class="leader-name">Jugal Arora</h4>
+                        <p class="leader-title">Founder & Chairman</p>
+                        <p class="leader-desc">With over 30 years of experience in real estate, Jugal Arora brings a distinguished perspective shaped by decades of expertise, entrepreneurial leadership, and strategic insight. His experience extends across real estate, stock markets, and the food industry, with a strong understanding of investments, business, and value creation. His vision is rooted in building ventures defined by trust, quality, and enduring value.</p>
+                        <blockquote class="leader-quote">“Our ambition is not to follow benchmarks, but to set them.”</blockquote>
+                    </div>
+                </div>
+
+                <div class="leader-card">
+                    <div class="leader-card-image">
+                        <img src="assets/SUMAN BINDAL.png" alt="Suman Bindal">
+                    </div>
+                    <div class="leader-card-content bg-light">
+                        <h4 class="leader-name">Suman Bindal</h4>
+                        <p class="leader-title">Founder & Chairman</p>
+                        <p class="leader-desc">With over 30 years of distinguished experience in luxury and high-end construction, Suman Bindal brings exceptional expertise in craftsmanship, execution, and uncompromising quality. His experience reflects a deep understanding of creating spaces defined by precision, sophistication, and enduring value.</p>
+                        <blockquote class="leader-quote">“True luxury lies in the details that stand the test of time.”</blockquote>
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     </section>
     
@@ -595,8 +724,23 @@
             <h2 class="editorial-heading mb-large">Our Completed Luxury Villa Work</h2>
             
             <div class="completed-showcase">
-                <div class="completed-image-wrapper">
-                    <img src="assets/completed_project_1789570671468.jpg" alt="Luxe Heaven Villas" class="completed-img">
+                <div class="completed-image-wrapper slider-wrapper">
+                    <div class="slider-container">
+                        <img src="assets/villa/luxe-heaven-villa-1.jpeg" alt="Luxe Heaven Villas Angle 1" class="completed-img slider-img">
+                        <img src="assets/villa/luxe-heaven-villa-2.jpeg" alt="Luxe Heaven Villas Angle 2" class="completed-img slider-img">
+                        <img src="assets/villa/luxe-heaven-villa-3.jpeg" alt="Luxe Heaven Villas Angle 3" class="completed-img slider-img">
+                        <img src="assets/villa/luxe-heaven-villa-4.jpeg" alt="Luxe Heaven Villas Angle 4" class="completed-img slider-img">
+                        <img src="assets/villa/luxe-heaven-villa-5.jpeg" alt="Luxe Heaven Villas Angle 5" class="completed-img slider-img">
+                    </div>
+                    <button class="slider-btn prev-btn" aria-label="Previous image">‹</button>
+                    <button class="slider-btn next-btn" aria-label="Next image">›</button>
+                    <div class="slider-dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
                 </div>
                 
                 <div class="completed-info-card">
@@ -607,19 +751,19 @@
                         
                         <div class="completed-stats">
                             <div class="stat">
-                                <span class="stat-value">12</span>
+                                <span class="stat-value">2</span>
                                 <span class="stat-label">Exclusive Villas</span>
                             </div>
                             <div class="stat">
-                                <span class="stat-value">2023</span>
+                                <span class="stat-value">Ongoing</span>
                                 <span class="stat-label">Delivered</span>
                             </div>
                         </div>
                         
-                        <span class="explore-link explore-link--disabled" aria-label="Sold out — project no longer available" title="This project is sold out">
+                        <a href="luxe-heaven-villas.html" class="explore-link" style="text-decoration: none;" aria-label="Explore Luxe Heaven Villas" title="Explore Luxe Heaven Villas">
                             Explore Project 
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                        </span>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -710,10 +854,6 @@
                             <span class="contact-label">Phone</span>
                             <a href="tel:+919876543210" class="contact-link">+91 98765 43210</a>
                         </div>
-                        <div class="contact-item">
-                            <span class="contact-label">Headquarters</span>
-                            <span class="contact-text">FNO Global Developers HQ,<br>North Goa, Goa, India.</span>
-                        </div>
                     </div>
                 </div>
                 
@@ -743,6 +883,40 @@
                             </span>
                         </button>
                     </form>
+                </div>
+            </div>
+
+            <!-- Bottom: Office Locations Horizontal -->
+            <div style="margin-top: 4rem; padding-top: 3rem; border-top: 1px solid rgba(254, 253, 208, 0.1);">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem;">
+                    <div class="contact-item">
+                        <span class="contact-label" style="display: flex; align-items: center; gap: 0.5rem;">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            Noida — Sector 62 (HQ)
+                        </span>
+                        <span class="contact-text">Office No. 123, Corranthan Building, Sector 62, Noida, UP</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label" style="display: flex; align-items: center; gap: 0.5rem;">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            Delhi — Krishna Nagar
+                        </span>
+                        <span class="contact-text">F-3/34, Vijay Chowk, Krishna Nagar, East Delhi, ND</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label" style="display: flex; align-items: center; gap: 0.5rem;">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            Delhi — Krishna Nagar
+                        </span>
+                        <span class="contact-text">C-9/1, Sethi Building Chowk, Krishna Nagar, East Delhi, ND</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label" style="display: flex; align-items: center; gap: 0.5rem;">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            Goa — Porvorim
+                        </span>
+                        <span class="contact-text">Porvorim, North Goa, Goa</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -794,7 +968,8 @@
 
                 <div class="footer-bottom-info">
                     <div class="footer-copyright-info">
-                        <p>FNO Global Developers HQ, North Goa, Goa, India.</p>
+                        <p><strong>FNO GLOBAL DEVELOPERS (FOCUSSED NATIONWIDE OPPORTUNITIES)</strong></p>
+                        <p>Headquarters: Sector 62, Noida | Offices: Delhi & Goa</p>
                         <p>&copy; 2026 FNO Global Developers. All rights reserved.</p>
                     </div>
                     <div class="footer-socials">

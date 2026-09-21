@@ -555,4 +555,62 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
+    // Property Card Slider Dots Logic
+    const sliders = document.querySelectorAll('.property-card-slider');
+    sliders.forEach(slider => {
+        const dotsContainer = slider.nextElementSibling;
+        if (!dotsContainer || !dotsContainer.classList.contains('slider-dots')) return;
+        const dots = dotsContainer.querySelectorAll('.dot');
+        
+        slider.addEventListener('scroll', () => {
+            const scrollLeft = slider.scrollLeft;
+            const slideWidth = slider.clientWidth;
+            const activeIndex = Math.round(scrollLeft / slideWidth);
+            
+            dots.forEach((dot, index) => {
+                if (index === activeIndex) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            });
+        });
+    });
+
+    // --------------------------------------------------------
+    // COMPLETED PROJECT SLIDER
+    // --------------------------------------------------------
+    const completedSliderContainer = document.querySelector('.completed-image-wrapper .slider-container');
+    if (completedSliderContainer) {
+        const sliderPrevBtn = document.querySelector('.completed-image-wrapper .prev-btn');
+        const sliderNextBtn = document.querySelector('.completed-image-wrapper .next-btn');
+        const dots = document.querySelectorAll('.completed-image-wrapper .dot');
+        const totalSliderImgs = document.querySelectorAll('.completed-image-wrapper .slider-img').length;
+        let currentSliderIndex = 0;
+
+        function updateCompletedSlider() {
+            completedSliderContainer.style.transform = `translateX(-${currentSliderIndex * 100}%)`;
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentSliderIndex);
+            });
+        }
+
+        sliderNextBtn.addEventListener('click', () => {
+            currentSliderIndex = (currentSliderIndex + 1) % totalSliderImgs;
+            updateCompletedSlider();
+        });
+
+        sliderPrevBtn.addEventListener('click', () => {
+            currentSliderIndex = (currentSliderIndex - 1 + totalSliderImgs) % totalSliderImgs;
+            updateCompletedSlider();
+        });
+
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                currentSliderIndex = index;
+                updateCompletedSlider();
+            });
+        });
+    }
+
 });

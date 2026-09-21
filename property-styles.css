@@ -1,0 +1,605 @@
+/* ==========================================================================
+   LUXE HEAVEN VILLAS PROPERTY PAGE STYLES (PREMIUM REDESIGN)
+   ========================================================================== */
+
+/* Theme Reset & Foundation */
+.property-page-body {
+    background-color: var(--warm-ivory);
+    color: var(--charcoal);
+    font-family: var(--font-sans);
+}
+
+.property-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px; /* Desktop padding */
+}
+
+/* Add top padding to the main content to avoid the sticky header overlap. 
+   Assuming the header is around 80px tall */
+main {
+    padding-top: 100px;
+}
+
+.property-section {
+    padding: 90px 0; /* 80-110px as requested */
+    position: relative;
+}
+.property-section.dark-section {
+    background-color: var(--deep-forest-green);
+    color: var(--warm-ivory);
+}
+
+/* Breadcrumb */
+.property-breadcrumb {
+    padding-bottom: 24px;
+    font-size: 0.9rem;
+    color: var(--muted-olive);
+}
+.property-breadcrumb a {
+    color: var(--deep-forest-green);
+    text-decoration: none;
+    font-weight: 500;
+}
+.property-breadcrumb a:hover {
+    color: var(--subtle-terracotta);
+}
+.property-breadcrumb span {
+    margin: 0 0.5rem;
+}
+
+/* Section Headings */
+.sec-heading {
+    font-family: var(--font-serif);
+    font-size: 2.5rem;
+    color: var(--deep-forest-green);
+    margin: 0 0 10px 0;
+    font-weight: 600;
+}
+.dark-section .sec-heading {
+    color: var(--warm-ivory);
+}
+.sec-subheading {
+    color: var(--muted-olive);
+    font-size: 1.1rem;
+    margin: 0 0 32px 0; /* 24-40px */
+}
+.dark-section .sec-subheading {
+    color: rgba(254, 253, 208, 0.7);
+}
+
+/* 1. HERO OVERVIEW (Title & Meta) */
+.hero-header-text {
+    margin-bottom: 32px;
+}
+.hero-header-text h1 {
+    font-family: var(--font-serif);
+    font-size: 3.5rem;
+    line-height: 1.1;
+    color: var(--deep-forest-green);
+    margin: 0 0 8px 0;
+}
+.hero-meta {
+    font-size: 1.15rem;
+    color: var(--muted-olive);
+    font-weight: 500;
+}
+
+/* 2. HERO GRID (Image Left, Card Right) */
+.hero-overview-grid {
+    display: flex; /* Using flex for 65% / 35% */
+    gap: 40px;
+    align-items: flex-start; /* Align at the top */
+    margin-bottom: 40px;
+}
+.hero-content {
+    flex: 0 0 62%;
+    width: 62%;
+}
+.hero-sidebar-container {
+    flex: 1; /* Takes remaining ~38% */
+}
+
+/* Hero Image */
+.hero-image-wrapper {
+    position: relative;
+    border-radius: var(--radius-lg, 12px);
+    overflow: hidden;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+.hero-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block; /* Remove bottom gap */
+}
+
+/* Thumbnails */
+.hero-thumbnails {
+    display: flex;
+    gap: 16px;
+    margin-top: 16px;
+}
+.hero-thumbnails img {
+    width: 100px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: var(--radius-sm, 6px);
+    cursor: pointer;
+    transition: 0.3s;
+    border: 2px solid transparent;
+}
+.hero-thumbnails img:hover, .hero-thumbnails img.active {
+    border-color: var(--subtle-terracotta);
+}
+
+/* Property Information Card (Right Side) */
+.hero-sidebar {
+    background: #ffffff;
+    border-radius: var(--radius-lg, 12px);
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    border: 1px solid rgba(10,34,32,0.05);
+    /* Make it genuinely sticky with reasonable height */
+    position: sticky;
+    top: 120px; 
+    z-index: 10;
+}
+.price-label {
+    font-size: 0.9rem;
+    color: var(--muted-olive);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 4px;
+    display: block;
+}
+.hero-price {
+    font-family: var(--font-serif);
+    font-size: 2.2rem;
+    color: var(--deep-forest-green);
+    margin: 0 0 24px 0;
+}
+.hero-specs {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+.hero-spec-item {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgba(10,34,32,0.1);
+}
+.hero-spec-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+.hero-spec-item span {
+    font-size: 0.9rem;
+    color: var(--muted-olive);
+    margin-bottom: 4px;
+}
+.hero-spec-item strong {
+    font-size: 1.15rem;
+    color: var(--deep-forest-green);
+    font-weight: 600;
+}
+.hero-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* 3. KEY PROPERTY FACTS (Row below hero) */
+.facts-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px; /* 20-32px */
+    padding-bottom: 80px;
+    border-bottom: 1px solid rgba(10,34,32,0.1);
+}
+.fact-card {
+    background: #ffffff;
+    flex: 1;
+    min-width: 150px;
+    padding: 24px;
+    border-radius: var(--radius-md, 8px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    border: 1px solid rgba(10,34,32,0.05);
+    text-align: center;
+}
+.fact-val {
+    display: block;
+    font-family: var(--font-serif);
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--deep-forest-green);
+    margin-bottom: 8px;
+}
+.fact-label {
+    display: block;
+    font-size: 0.95rem;
+    color: var(--muted-olive);
+    font-weight: 500;
+}
+
+/* 4. PROJECT DESCRIPTION */
+.desc-content {
+    max-width: 750px; /* 700-800px readability width */
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: var(--charcoal);
+}
+.desc-content p {
+    margin: 0 0 24px 0;
+}
+.desc-content p:last-child {
+    margin-bottom: 0;
+}
+.desc-intro {
+    font-size: 1.4rem;
+    color: var(--deep-forest-green);
+    font-weight: 500;
+}
+
+/* 5. HIGHLIGHTS / USPs */
+.usps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 32px; /* 20-32px */
+}
+.usp-card {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.usp-icon {
+    width: 50px;
+    height: 50px;
+    background: var(--sand-beige);
+    border-radius: var(--radius-sm, 6px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--deep-forest-green);
+    flex-shrink: 0;
+}
+.usp-content h4 {
+    margin: 0 0 8px 0;
+    color: var(--deep-forest-green);
+    font-size: 1.15rem;
+}
+.usp-content p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: var(--charcoal);
+    line-height: 1.5;
+}
+
+/* 6. CONFIGURATION & PRICING */
+.config-card {
+    background: #ffffff;
+    border-radius: var(--radius-lg, 12px);
+    padding: 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+    border: 1px solid rgba(10,34,32,0.05);
+    margin-bottom: 40px;
+}
+.config-info h3 {
+    font-size: 1.6rem;
+    color: var(--deep-forest-green);
+    margin: 0 0 8px 0;
+}
+.config-info p {
+    margin: 0;
+    color: var(--charcoal);
+    font-size: 1.05rem;
+}
+.config-price {
+    text-align: right;
+}
+.config-price .price {
+    font-family: var(--font-serif);
+    font-size: 2rem;
+    color: var(--deep-forest-green);
+    display: block;
+    margin-bottom: 12px;
+}
+
+/* 7. FLOOR PLANS */
+.floorplan-container {
+    background: #ffffff;
+    border-radius: var(--radius-lg, 12px);
+    padding: 60px 32px;
+    text-align: center;
+}
+.floorplan-container h3 {
+    font-size: 1.6rem;
+    margin: 0 0 16px 0;
+    color: var(--deep-forest-green);
+}
+.floorplan-container p {
+    color: var(--charcoal);
+    margin: 0 0 32px 0;
+}
+
+/* 8. AMENITIES */
+.amenities-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 24px;
+}
+.amenity-line {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 1.05rem;
+    color: var(--deep-forest-green);
+    padding: 16px;
+    background: #ffffff;
+    border-radius: var(--radius-sm, 6px);
+    border: 1px solid rgba(10,34,32,0.05);
+}
+.amenity-line svg {
+    color: var(--subtle-terracotta);
+}
+
+/* 9. LOCATION & CONNECTIVITY */
+.location-grid {
+    display: flex;
+    gap: 40px;
+}
+.location-grid > div {
+    flex: 1;
+}
+.location-map iframe {
+    width: 100%;
+    height: 400px;
+    border-radius: var(--radius-lg, 12px);
+    display: block;
+}
+.connectivity-list {
+    list-style: none;
+    padding: 0;
+    margin: 32px 0 0 0;
+}
+.connectivity-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 0;
+    border-bottom: 1px solid rgba(10,34,32,0.1);
+    font-size: 1.05rem;
+    color: var(--charcoal);
+}
+
+/* 10. PROJECT GALLERY */
+.masonry-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 250px;
+    gap: 24px;
+}
+.masonry-item {
+    border-radius: var(--radius-md, 8px);
+    overflow: hidden;
+    position: relative;
+}
+.masonry-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+.masonry-item:hover img {
+    transform: scale(1.03); /* Subtle scale as requested (1.02-1.04) */
+}
+.masonry-item.wide { grid-column: span 2; }
+.masonry-item.tall { grid-row: span 2; }
+
+/* 11. DEVELOPER PROFILE */
+.developer-card {
+    background: #ffffff;
+    border-radius: var(--radius-lg, 12px);
+    padding: 40px;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+.dev-logo-avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--sand-beige);
+    flex-shrink: 0;
+}
+.dev-info h3 {
+    margin: 0;
+}
+.dev-info p {
+    margin: 0;
+}
+
+/* 12. FAQ */
+.faq-accordion {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.faq-item {
+    border-bottom: 1px solid rgba(10,34,32,0.1);
+}
+.faq-header {
+    width: 100%;
+    background: none;
+    border: none;
+    text-align: left;
+    padding: 24px 0;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--deep-forest-green);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.faq-content {
+    display: none;
+    padding-bottom: 24px;
+    color: var(--charcoal);
+    line-height: 1.6;
+}
+.faq-item.active .faq-content {
+    display: block;
+}
+
+/* 13. LEAD GEN CTA */
+.final-cta-banner {
+    background: var(--sand-beige);
+    border-radius: var(--radius-lg, 12px);
+    padding: 60px 40px;
+    text-align: center;
+    color: var(--deep-forest-green);
+}
+.final-cta-banner h2 {
+    font-family: var(--font-serif);
+    font-size: 2.5rem;
+    margin: 0 0 16px 0;
+}
+.final-cta-banner p {
+    font-size: 1.15rem;
+    margin: 0 0 32px 0;
+}
+
+/* 14. STICKY MOBILE CTA */
+.sticky-mobile-cta {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #ffffff;
+    box-shadow: 0 -5px 20px rgba(0,0,0,0.1);
+    padding: 12px 16px;
+    z-index: 1000;
+    gap: 12px;
+}
+.sticky-mobile-cta button, .sticky-mobile-cta a {
+    flex: 1;
+    text-align: center;
+    padding: 12px;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+.btn-whatsapp {
+    background: #25D366;
+    color: white;
+}
+.btn-call {
+    background: var(--deep-forest-green);
+    color: var(--warm-ivory);
+}
+
+/* Responsive Adjustments */
+
+@media (max-width: 1024px) {
+    /* Tablet */
+    .property-container {
+        padding: 0 24px;
+    }
+    .hero-overview-grid {
+        flex-direction: column;
+    }
+    .hero-content {
+        width: 100%;
+    }
+    .hero-sidebar {
+        position: static;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 24px;
+    }
+    .hero-specs {
+        flex-direction: row;
+        gap: 24px;
+        margin: 0;
+    }
+    .hero-spec-item {
+        border-bottom: none;
+        padding-bottom: 0;
+        border-right: 1px solid rgba(10,34,32,0.1);
+        padding-right: 24px;
+    }
+    .hero-spec-item:last-child {
+        border-right: none;
+    }
+    .location-grid, .developer-card {
+        flex-direction: column;
+    }
+    .masonry-gallery {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Mobile */
+    .property-container {
+        padding: 0 16px;
+    }
+    .property-section {
+        padding: 60px 0;
+    }
+    .hero-header-text h1 {
+        font-size: 2.5rem;
+    }
+    .hero-sidebar {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+    }
+    .hero-specs {
+        flex-direction: column;
+        border-right: none;
+        border-bottom: 1px solid rgba(10,34,32,0.1);
+        padding-bottom: 24px;
+        margin-bottom: 24px;
+    }
+    .hero-spec-item {
+        border-right: none;
+        border-bottom: 1px solid rgba(10,34,32,0.1);
+        padding-bottom: 16px;
+        padding-right: 0;
+    }
+    .config-card {
+        flex-direction: column;
+        text-align: center;
+        gap: 24px;
+    }
+    .config-price {
+        text-align: center;
+    }
+    .masonry-gallery {
+        grid-template-columns: 1fr;
+    }
+    .masonry-item.wide, .masonry-item.tall {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+    .sticky-mobile-cta {
+        display: flex;
+    }
+    body {
+        padding-bottom: 80px; /* Space for sticky CTA */
+    }
+}
