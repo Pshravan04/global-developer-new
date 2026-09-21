@@ -3,14 +3,14 @@
    ========================================================================== */
 
 :root {
-    /* Colors */
-    --warm-ivory: #fcfbf9;
-    --sand-beige: #f2efe9;
-    --deep-forest-green: #1a3c34;
-    --muted-olive: #4a5c50;
-    --charcoal: #1a1a1a;
-    --subtle-terracotta: #c27c5e;
-    --muted-gold: #c5a059;
+    /* 5-Color FNO Palette */
+    --warm-ivory: #FEFDD0;       /* CREAM: Primary background */
+    --sand-beige: #EAE799;       /* SOFT LIME: Secondary background */
+    --deep-forest-green: #11470F; /* DEEP GREEN: Primary typography & dark sections */
+    --muted-olive: #739C38;       /* MUTED GREEN: Secondary text & supporting accents */
+    --charcoal: #11470F;          /* Map charcoal to Deep Green for strict typography compliance */
+    --subtle-terracotta: #D4F357; /* BRIGHT PEAR: Energetic accent / CTA */
+    --muted-gold: #D4F357;        /* Map gold to Bright Pear */
     
     /* Typography */
     --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -923,7 +923,7 @@ h1, h2, h3, h4, h5, h6 {
 .dest-point:hover, .dest-point.active {
     transform: translateY(-5px);
     box-shadow: var(--shadow-medium);
-    background-color: #fff; /* Slightly brighter on hover/active */
+    background-color: var(--warm-ivory); /* Slightly brighter on hover/active */
 }
 
 .bento-card-large h3 {
@@ -1251,7 +1251,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .promoter-block.bg-light {
-    background-color: #e9e5de; /* Match the screenshot's greyish beige */
+    background-color: var(--sand-beige); /* Match the screenshot's greyish beige */
     color: var(--charcoal);
 }
 
