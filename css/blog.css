@@ -7,10 +7,10 @@
   Moving towards a minimal, architectural magazine feel 
 */
 :root {
-    --blog-bg: var(--color-neutral); /* Warm Greige Main Background */
-    --blog-text: var(--color-primary); /* Deep Teal */
-    --blog-text-light: rgba(7, 111, 148, 0.7); 
-    --blog-border: rgba(7, 111, 148, 0.15);
+    --blog-bg: #FFFFFF; /* White */
+    --blog-text: var(--color-primary); /* Navy */
+    --blog-text-light: rgba(2, 38, 103, 0.7); /* Navy with opacity */
+    --blog-border: rgba(2, 38, 103, 0.15);
     
     --font-editorial: 'Poppins', sans-serif;
     --spacing-editorial-section: 140px;
