@@ -729,7 +729,7 @@ h1, h2, h3, h4, h5, h6 {
    03B INLINE QUOTE
    ========================================================================== */
 .inline-quote-section {
-    background: var(--brand-greige);
+    background: var(--color-primary);
     padding: 10rem 0; /* Changed from 6rem 5% 8rem to match the full-width, clean look */
 }
 
@@ -786,7 +786,7 @@ h1, h2, h3, h4, h5, h6 {
    04 NORTH GOA MAP
    ========================================================================== */
 .location-moment-section {
-    background: linear-gradient(180deg, var(--brand-greige), var(--brand-sage));
+    background: var(--color-primary);
 }
 
 .bento-grid.location-bento-grid {
