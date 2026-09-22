@@ -43,96 +43,120 @@
         </div>
     </header>
 
-    <!-- Main Content -->
-    <main>
-        
-        <!-- Breadcrumb & Container -->
+        <!-- BREADCRUMB & EDITORIAL HERO -->
         <div class="property-container">
-            <div class="property-breadcrumb">
-                <a href="index.html">Home</a> <span>/</span> 
-                <a href="index.html#project">Completed Projects</a> <span>/</span> 
-                Luxe Heaven Villas
-            </div>
-
-            <div class="hero-header-text">
-                <h1>Luxe Heaven Villas</h1>
-                <div class="hero-meta">Porvorim, North Goa • By FNO Global Developers</div>
-            </div>
-
-            <!-- 1 & 2. HERO / OVERVIEW & GALLERY -->
-            <div class="hero-overview-grid">
-                <div class="hero-content">
-                    <div class="hero-image-wrapper">
-                        <img id="main-hero-img" src="assets/villa/luxe-heaven-villa-2.jpeg" alt="Luxe Heaven Villas Exterior">
+            <div class="editorial-layout-grid">
+                
+                <!-- Left: Main Content -->
+                <div class="editorial-main-content">
+                    <div class="property-breadcrumb">
+                        <a href="index.html">Home</a> <span>/</span> 
+                        <a href="index.html#project">Completed Projects</a> <span>/</span> 
+                        Luxe Heaven Villas
                     </div>
-                    <div class="hero-thumbnails">
+
+                    <div class="editorial-title-area">
+                        <h1>Luxe Heaven Villas</h1>
+                        <div class="editorial-meta">
+                            Porvorim, North Goa<br>
+                            By FNO Global Developers
+                        </div>
+                    </div>
+
+                    <div class="editorial-image-wrapper">
+                        <img id="main-hero-img" src="assets/villa/luxe-heaven-villa-2.jpeg" alt="Luxe Heaven Villas Exterior">
+                        
+                        <!-- Optional Editorial Overlay -->
+                        <div class="editorial-image-overlay">
+                            <strong>LUXE HEAVEN VILLAS</strong><br>
+                            Private European-Style Villas<br>
+                            Porvorim, North Goa
+                        </div>
+                    </div>
+
+                    <div class="editorial-thumbnails">
                         <img src="assets/villa/luxe-heaven-villa-2.jpeg" alt="Thumb 1" class="thumb active" onclick="updateHeroImage(this)">
                         <img src="assets/villa/luxe-heaven-villa-1.jpeg" alt="Thumb 2" class="thumb" onclick="updateHeroImage(this)">
                         <img src="assets/villa/luxe-heaven-villa-3.jpeg" alt="Thumb 3" class="thumb" onclick="updateHeroImage(this)">
                         <img src="assets/villa/luxe-heaven-villa-4.jpeg" alt="Thumb 4" class="thumb" onclick="updateHeroImage(this)">
                         <img src="assets/villa/luxe-heaven-villa-5.jpeg" alt="Thumb 5" class="thumb" onclick="updateHeroImage(this)">
+                        <button class="view-gallery-btn" onclick="console.log('Open Gallery Lightbox')">+5 View Gallery</button>
                     </div>
-                </div>
-                
-                <div class="hero-sidebar-container">
-                    <div class="hero-sidebar">
-                        <span class="price-label">Starting Price</span>
-                        <h2 class="hero-price">Price on Request</h2>
-                        <div class="hero-specs">
-                            <div class="hero-spec-item">
-                                <span>Configuration</span>
-                                <strong>3+1 BHK Villa</strong>
-                            </div>
-                            <div class="hero-spec-item">
-                                <span>Plot Area</span>
-                                <strong>585 Sqm</strong>
-                            </div>
-                            <div class="hero-spec-item">
-                                <span>Possession</span>
-                                <strong>Immediate</strong>
-                            </div>
+
+                    <div class="editorial-specs-bar">
+                        <div class="editorial-spec-item">
+                            <span>STARTING PRICE</span>
+                            <strong>Price on Request</strong>
                         </div>
-                        <div class="hero-actions">
-                            <button class="pill-btn open-popup" style="width:100%; justify-content:center;" onclick="document.getElementById('enquiry-popup').showModal()">ENQUIRE NOW</button>
-                            <!-- Using the brand's secondary button style or mimicking pill-btn but transparent -->
-                            <button class="pill-btn-outline open-popup" style="width:100%; justify-content:center; background: transparent; border: 1px solid var(--deep-forest-green); color: var(--deep-forest-green); border-radius: 50px; padding: 0.75rem 1.5rem; font-weight: 500; font-family: var(--font-sans); cursor: pointer; transition: var(--transition-smooth);" onclick="document.getElementById('enquiry-popup').showModal()">Download Brochure</button>
+                        <div class="editorial-spec-item">
+                            <span>CONFIGURATION</span>
+                            <strong>3+1 BHK Villa</strong>
+                        </div>
+                        <div class="editorial-spec-item">
+                            <span>PLOT AREA</span>
+                            <strong>585 Sqm</strong>
+                        </div>
+                        <div class="editorial-spec-item">
+                            <span>POSSESSION</span>
+                            <strong>Immediate</strong>
                         </div>
                     </div>
+
+                    <div class="editorial-desc-row">
+                        <div class="desc-left">
+                            <h3>ABOUT THE PROPERTY</h3>
+                            <p class="desc-intro">Presenting two ultra-luxurious, fully furnished European-style villas in the prime location of Pehn de Franc, Porvorim.</p>
+                        </div>
+                        <div class="desc-right">
+                            <p>Designed for those who seek uncompromising luxury, Luxe Heaven Villas sit majestically on a 585 Sqm plot. Every inch of this property has been carefully curated to deliver a private resort experience, combining the timeless elegance of European architecture with the vibrant soul of North Goa.</p>
+                            <p>From the private Otis elevator and state-of-the-art smart home security to a dedicated luxury home theatre and stunning bar setups, this is a home built for exceptional living and grand entertaining.</p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            
-            <!-- 3. KEY PROPERTY FACTS (Directly Underneath) -->
-            <div class="facts-grid">
-                <div class="fact-card">
-                    <span class="fact-val">585</span>
-                    <span class="fact-label">Sqm Plot</span>
+
+                <!-- Right: Sticky Sidebar -->
+                <div class="editorial-sidebar-container">
+                    <div class="editorial-sticky-form">
+                        <h3 class="sidebar-heading">Register Interest</h3>
+                        <p class="sidebar-subheading">Get pricing, floor plans, and availability.</p>
+                        
+                        <form class="enquiry-form">
+                            <div class="form-group floating">
+                                <input type="text" id="sideFullName" placeholder=" " required>
+                                <label for="sideFullName">Full Name</label>
+                            </div>
+                            <div class="form-group floating">
+                                <input type="tel" id="sidePhone" placeholder=" " required>
+                                <label for="sidePhone">Phone Number</label>
+                            </div>
+                            <div class="form-group floating">
+                                <input type="email" id="sideEmail" placeholder=" " required>
+                                <label for="sideEmail">Email Address</label>
+                            </div>
+                            <div class="form-group floating">
+                                <select id="sideInterestedIn" required>
+                                    <option value="" disabled selected hidden></option>
+                                    <option value="3bhk">3+1 BHK Villa</option>
+                                    <option value="other">Other Configuration</option>
+                                </select>
+                                <label for="sideInterestedIn">Preferred Configuration</label>
+                            </div>
+                            <div class="form-group floating">
+                                <textarea id="sideMessage" placeholder=" " style="min-height: 80px;"></textarea>
+                                <label for="sideMessage">Message (Optional)</label>
+                            </div>
+                            <button type="submit" class="pill-btn-icon full-width" style="justify-content: center; margin-top: 1rem;">
+                                Request Details
+                                <span class="icon-circle">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                                </span>
+                            </button>
+                        </form>
+                    </div>
                 </div>
-                <div class="fact-card">
-                    <span class="fact-val">3+1</span>
-                    <span class="fact-label">BHK Villa</span>
-                </div>
-                <div class="fact-card">
-                    <span class="fact-val">Immediate</span>
-                    <span class="fact-label">Possession</span>
-                </div>
-                <div class="fact-card">
-                    <span class="fact-val">2</span>
-                    <span class="fact-label">Luxury Villas</span>
-                </div>
+
             </div>
         </div>
-
-        <!-- 4. PROJECT DESCRIPTION -->
-        <section class="property-section">
-            <div class="property-container">
-                <h2 class="sec-heading">ABOUT THE PROJECT</h2>
-                <div class="desc-content">
-                    <p class="desc-intro">Presenting two ultra-luxurious, fully furnished European-style villas in the prime location of Pehn de Franc, Porvorim.</p>
-                    <p>Designed for those who seek uncompromising luxury, Luxe Heaven Villas sit majestically on a 585 Sqm plot. Every inch of this property has been carefully curated to deliver a private resort experience, combining the timeless elegance of European architecture with the vibrant soul of North Goa.</p>
-                    <p>From the private Otis elevator and state-of-the-art smart home security to a dedicated luxury home theatre and stunning bar setups, this is a home built for exceptional living and grand entertaining.</p>
-                </div>
-            </div>
-        </section>
 
         <!-- 5. PROJECT HIGHLIGHTS / USPs -->
         <section class="property-section">
