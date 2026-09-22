@@ -450,7 +450,7 @@ body.blog-body {
    6. ARTICLE DETAIL PAGE - HERO
    ========================================================================== */
 .article-hero {
-    padding-top: 60px;
+    padding-top: 120px;
     margin-bottom: var(--spacing-editorial-element);
     text-align: center;
 }
