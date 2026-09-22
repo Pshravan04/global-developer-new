@@ -1,0 +1,855 @@
+/* ==========================================================================
+   FNO Global Developers - Premium Editorial Blog Styles
+   ========================================================================== */
+
+/* 
+  Core Typography Overrides for Blog 
+  Moving towards a minimal, architectural magazine feel 
+*/
+:root {
+    --blog-bg: var(--color-neutral); /* Warm Greige Main Background */
+    --blog-text: var(--color-primary); /* Deep Teal */
+    --blog-text-light: rgba(7, 111, 148, 0.7); 
+    --blog-border: rgba(7, 111, 148, 0.15);
+    
+    --font-editorial: 'Poppins', sans-serif;
+    --spacing-editorial-section: 140px;
+    --spacing-editorial-element: 80px;
+}
+
+body.blog-body {
+    background-color: var(--blog-bg);
+    color: var(--blog-text);
+}
+
+.blog-listing-page,
+.blog-detail-page {
+    background-color: var(--blog-bg);
+    color: var(--blog-text);
+}
+
+/* ==========================================================================
+   1. EDITORIAL HERO (LISTING PAGE)
+   ========================================================================== */
+.blog-hero {
+    padding: var(--spacing-editorial-section) 0;
+    overflow: hidden;
+}
+
+.blog-hero .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+}
+
+.blog-hero-text {
+    flex: 0 0 40%;
+    position: relative;
+    z-index: 2;
+}
+
+.blog-hero-text .hero-kicker {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    display: block;
+    color: var(--color-secondary);
+}
+
+.blog-hero-text .main-headline {
+    font-size: clamp(3rem, 5vw, 5.5rem);
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    font-weight: 400;
+    color: var(--color-primary);
+    margin-bottom: 2rem;
+}
+
+.blog-hero-text p {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    color: var(--blog-text-light);
+    max-width: 90%;
+}
+
+.blog-hero-image-wrapper {
+    flex: 0 0 55%;
+    position: relative;
+    aspect-ratio: 16/10;
+    border-radius: 12px;
+    overflow: hidden;
+    transform: translateX(-5%); /* Create subtle overlap */
+}
+
+.blog-hero-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 992px) {
+    .blog-hero .container {
+        flex-direction: column;
+    }
+    .blog-hero-text {
+        flex: 0 0 100%;
+        text-align: left;
+    }
+    .blog-hero-image-wrapper {
+        flex: 0 0 100%;
+        transform: none;
+        width: 100%;
+    }
+}
+
+/* ==========================================================================
+   2. CATEGORY NAVIGATION & SEARCH
+   ========================================================================== */
+.editorial-filters {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 2rem;
+    margin-bottom: var(--spacing-editorial-element);
+    border-bottom: 1px solid var(--blog-border);
+}
+
+.blog-categories {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.category-chip {
+    background: none;
+    border: none;
+    color: var(--blog-text-light);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 0.5rem 0;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.category-chip::after {
+    content: "•";
+    position: absolute;
+    right: -1rem;
+    color: var(--blog-border);
+}
+
+.category-chip:last-child::after {
+    display: none;
+}
+
+.category-chip:hover {
+    color: var(--color-primary);
+}
+
+.category-chip.active {
+    color: var(--color-primary);
+}
+
+.category-chip.active::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-accent);
+}
+
+.editorial-search {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--color-primary);
+    padding-bottom: 0.25rem;
+}
+
+.editorial-search input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--color-primary);
+    font-family: inherit;
+    font-size: 0.9rem;
+    width: 200px;
+}
+
+.editorial-search input::placeholder {
+    color: var(--blog-text-light);
+}
+
+.editorial-search svg {
+    color: var(--color-primary);
+    width: 16px;
+    height: 16px;
+}
+
+@media (max-width: 768px) {
+    .editorial-filters {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2rem;
+    }
+    .blog-categories {
+        overflow-x: auto;
+        white-space: nowrap;
+        width: 100%;
+        padding-bottom: 1rem;
+    }
+}
+
+/* ==========================================================================
+   3. FULL BLEED HERO (LISTING)
+   ========================================================================== */
+.blog-hero.full-bleed {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    min-height: 500px;
+    max-height: 800px;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 4rem;
+    overflow: hidden;
+}
+.blog-hero.full-bleed .hero-bg {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 1;
+}
+.blog-hero.full-bleed .hero-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.blog-hero.full-bleed .hero-overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 60%);
+}
+.blog-hero.full-bleed .hero-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+}
+.blog-hero.full-bleed .hero-text {
+    max-width: 600px;
+}
+.blog-hero.full-bleed .hero-kicker {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 1rem;
+    display: block;
+    font-weight: 500;
+}
+.blog-hero.full-bleed .main-headline {
+    font-size: clamp(2.5rem, 4vw, 4rem);
+    line-height: 1.1;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+.blog-hero.full-bleed p {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+.blog-hero.full-bleed .hero-arrow {
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+.blog-hero.full-bleed .hero-arrow svg {
+    width: 32px;
+    height: 32px;
+    color: white;
+}
+.blog-hero.full-bleed:hover .hero-arrow {
+    transform: translateX(10px);
+}
+.hero-link-overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 3;
+}
+
+/* ==========================================================================
+   4. EDITORIAL STORY GRID (LISTING)
+   ========================================================================== */
+.editorial-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 2.5rem;
+    margin-bottom: var(--spacing-editorial-section);
+}
+
+.editorial-card {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+    height: 100%;
+}
+
+.editorial-card.layout-third {
+    grid-column: span 4;
+}
+
+.editorial-card .card-image-wrapper {
+    width: 100%;
+    aspect-ratio: 16/9;
+    height: auto;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+}
+
+.editorial-card .card-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.editorial-card:hover .card-image-wrapper img {
+    transform: scale(1.03);
+}
+
+.editorial-card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-grow: 1;
+}
+
+.editorial-card .card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: 0.5rem;
+}
+
+.editorial-card p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: var(--blog-text-light);
+    margin-bottom: 1.5rem;
+}
+
+.card-author-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: auto;
+}
+
+.card-author-meta .author-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #f0f0f0;
+}
+
+.card-author-meta .author-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-author-meta .author-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-author-meta .author-name {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+.card-author-meta .publish-date {
+    font-size: 0.8rem;
+    color: var(--blog-text-light);
+}
+
+@media (max-width: 992px) {
+    .editorial-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+    }
+    .editorial-card.layout-third {
+        grid-column: span 12;
+    }
+    .blog-hero.full-bleed {
+        height: 50vh;
+        min-height: 400px;
+    }
+    .blog-hero.full-bleed .hero-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2rem;
+    }
+}
+
+/* ==========================================================================
+   5. DESTINATION EDIT FEATURE (LISTING)
+   ========================================================================== */
+.destination-edit-section {
+    position: relative;
+    padding: var(--spacing-editorial-section) 0;
+    margin: 0;
+    color: var(--color-white);
+    background: var(--brand-gradient);
+}
+
+.destination-edit-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.destination-edit-content h2 {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    margin-bottom: 2rem;
+    font-weight: 400;
+}
+
+.destination-edit-content h3 {
+    font-size: clamp(2.5rem, 4vw, 4rem);
+    font-weight: 300;
+    line-height: 1.1;
+    margin-bottom: 2rem;
+}
+
+/* ==========================================================================
+   6. ARTICLE DETAIL PAGE - HERO
+   ========================================================================== */
+.article-hero {
+    padding-top: 60px;
+    margin-bottom: var(--spacing-editorial-element);
+    text-align: center;
+}
+
+.article-hero .breadcrumbs {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--blog-text-light);
+    margin-bottom: 3rem;
+}
+
+.article-hero .breadcrumbs a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.article-hero .breadcrumbs a:hover {
+    color: var(--color-primary);
+}
+
+.article-category {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-accent);
+    margin-bottom: 1.5rem;
+    display: block;
+}
+
+.article-title {
+    font-size: clamp(2.5rem, 4vw, 4.5rem);
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    max-width: 1000px;
+    margin: 0 auto 1.5rem;
+    color: var(--color-primary);
+}
+
+.article-intro {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: var(--blog-text-light);
+    max-width: 760px;
+    margin: 0 auto 2rem;
+}
+
+.article-meta {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--blog-text-light);
+}
+
+.article-hero-image {
+    width: 100%;
+    max-width: 1400px;
+    margin: 4rem auto 0;
+    aspect-ratio: 16/9;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.article-hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ==========================================================================
+   7. ARTICLE DETAIL PAGE - LAYOUT
+   ========================================================================== */
+.article-layout {
+    display: grid;
+    grid-template-columns: 1fr 250px;
+    gap: 6rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-bottom: var(--spacing-editorial-section);
+}
+
+.article-content {
+    max-width: 760px;
+    font-size: 1.125rem; /* 18px */
+    line-height: 1.75;
+    color: var(--color-text);
+}
+
+.article-content h2 {
+    font-size: clamp(1.75rem, 3vw, 2.5rem);
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    margin: 4rem 0 1.5rem;
+    color: var(--color-primary);
+}
+
+.article-content h3 {
+    font-size: 1.65rem;
+    font-weight: 400;
+    margin: 2.5rem 0 1rem;
+    color: var(--color-primary);
+}
+
+.article-content p {
+    margin-bottom: 1.5rem;
+}
+
+.article-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 2.5rem 0;
+}
+
+/* Editorial Highlights */
+.editorial-highlight {
+    margin: 3rem 0;
+    padding: 2.5rem;
+    background: var(--color-white);
+    border-left: 4px solid var(--color-accent);
+    box-shadow: var(--shadow-soft);
+    font-size: 1.5rem;
+    line-height: 1.4;
+    font-style: italic;
+    color: var(--color-primary);
+    border-radius: 0 8px 8px 0;
+}
+
+/* Breakout Image */
+.image-breakout {
+    width: 100vw;
+    max-width: 1100px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 4rem 0;
+}
+
+/* Sidebar & TOC */
+.article-sidebar {
+    position: sticky;
+    top: 120px;
+    align-self: start;
+}
+
+.sidebar-title {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--blog-text-light);
+    margin-bottom: 1.5rem;
+}
+
+.toc-list {
+    list-style: none;
+    padding: 0;
+}
+
+.toc-list li {
+    margin-bottom: 1rem;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.toc-list li::before {
+    content: "0" counter(toc-counter);
+    counter-increment: toc-counter;
+    position: absolute;
+    left: 0;
+    font-size: 0.75rem;
+    color: var(--blog-border);
+}
+
+.toc-list {
+    counter-reset: toc-counter;
+}
+
+.toc-list a {
+    text-decoration: none;
+    color: var(--color-text);
+    font-size: 0.95rem;
+    transition: color 0.3s;
+}
+
+.toc-list a:hover {
+    color: var(--color-accent);
+}
+
+/* Share Controls */
+.share-controls {
+    display: flex;
+    gap: 1rem;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--blog-border);
+}
+
+.share-controls a {
+    color: var(--blog-text-light);
+    transition: color 0.3s;
+}
+
+.share-controls a:hover {
+    color: var(--color-primary);
+}
+
+@media (max-width: 992px) {
+    .article-layout {
+        grid-template-columns: 1fr;
+    }
+    .article-sidebar {
+        position: relative;
+        top: 0;
+        margin-top: 4rem;
+        border-top: 1px solid var(--blog-border);
+        padding-top: 2rem;
+    }
+    .image-breakout {
+        width: 100%;
+        left: 0;
+        transform: none;
+    }
+}
+
+/* ==========================================================================
+   8. CONTINUE EXPLORING (RELATED)
+   ========================================================================== */
+.continue-exploring {
+    border-top: 1px solid var(--blog-border);
+    padding: var(--spacing-editorial-element) 0;
+}
+
+.continue-exploring-title {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.related-row {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--blog-border);
+    text-decoration: none;
+    color: inherit;
+    transition: background 0.3s ease;
+}
+
+.related-row:hover {
+    background: rgba(255,255,255,0.4);
+}
+
+.related-image {
+    width: 120px;
+    height: 80px;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+.related-number {
+    font-size: 0.85rem;
+    color: var(--blog-text-light);
+    width: 30px;
+}
+
+.related-title {
+    flex: 1;
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+
+.related-meta {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-accent);
+}
+
+@media (max-width: 768px) {
+    .related-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    .related-image {
+        width: 100%;
+        height: 160px;
+    }
+}
+
+/* ==========================================================================
+   9. READING PROGRESS BAR
+   ========================================================================== */
+.reading-progress-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: transparent;
+    z-index: 9999;
+}
+
+.reading-progress-bar {
+    height: 100%;
+    background: var(--brand-gradient);
+    width: 0%;
+}
+
+/* ==========================================================================
+   10. NEWSLETTER CTA (FOOTER)
+   ========================================================================== */
+.newsletter-cta {
+    background: var(--brand-gradient);
+    padding: 6rem 0;
+    text-align: center;
+    color: var(--color-white);
+}
+
+.newsletter-cta h2 {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    margin-bottom: 1rem;
+}
+
+.newsletter-cta p {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 3rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.newsletter-form {
+    display: flex;
+    max-width: 400px;
+    margin: 0 auto;
+    border-bottom: 1px solid rgba(255,255,255,0.5);
+    padding-bottom: 0.5rem;
+}
+
+.newsletter-form input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 1rem;
+}
+
+.newsletter-form input::placeholder {
+    color: rgba(255,255,255,0.7);
+}
+
+.newsletter-form button {
+    background: none;
+    border: none;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.85rem;
+    cursor: pointer;
+}
+
+.blog-faqs {
+    margin-top: 4rem;
+    padding-top: 4rem;
+    border-top: 1px solid var(--blog-border);
+}
+
+.blog-faqs h3 {
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+}
+
+.faq-item {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--blog-border);
+}
+
+.faq-q {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: var(--color-primary);
+}
+
+.faq-a {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--color-text);
+}
