@@ -6,10 +6,10 @@
     /* New 3-Color FNO Palette */
     --color-primary: #022667;
     /* Navy */
-    --color-secondary: #92E60A;
-    /* Lime */
-    --color-accent: #92E60A;
-    /* Lime */
+    --color-secondary: #058F03;
+    /* Green */
+    --color-accent: #058F03;
+    /* Green */
     --color-sage: #F4F4F4;
     /* Light grey for subtle backgrounds instead of sage */
     --color-neutral: #FFFFFF;
@@ -447,7 +447,7 @@ h6 {
 
 .header-nav ul {
     display: flex;
-    gap: 2.5rem;
+    gap: 1.5rem;
 }
 
 .header-nav a {
@@ -457,6 +457,7 @@ h6 {
     text-transform: capitalize;
     letter-spacing: 0;
     position: relative;
+    white-space: nowrap;
 }
 
 .header-nav a::after {
@@ -831,7 +832,7 @@ h6 {
    03B INLINE QUOTE
    ========================================================================== */
 .inline-quote-section {
-    background: var(--color-primary);
+    background: var(--color-accent);
     padding: 10rem 0;
     /* Changed from 6rem 5% 8rem to match the full-width, clean look */
 }
@@ -866,7 +867,7 @@ h6 {
     font-size: 1rem;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    color: var(--color-accent);
+    color: var(--color-white);
     text-align: right;
 }
 
@@ -2263,7 +2264,7 @@ h6 {
 .scroll-number {
     font-family: var(--font-sans);
     font-size: 4rem;
-    color: var(--color-sage);
+    color: var(--color-accent);
     margin-bottom: 1rem;
     line-height: 1;
 }
@@ -2623,7 +2624,7 @@ body.modal-open {
 .marquee-section {
     padding: 3rem 0;
     overflow: hidden;
-    background-color: var(--brand-greige);
+    background-color: var(--color-accent);
     border-top: 1px solid var(--color-sage);
     border-bottom: 1px solid var(--color-sage);
 }
@@ -2647,7 +2648,7 @@ body.modal-open {
     font-size: 3vw;
     font-weight: 500;
     /* slightly bolder for readability on bright pear */
-    color: var(--color-primary);
+    color: var(--color-white);
     letter-spacing: 0.1em;
     text-transform: uppercase;
 }
@@ -2837,7 +2838,7 @@ body.modal-open {
     font-size: 0.875rem;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    color: var(--color-accent);
+    color: var(--color-white);
 }
 
 .contact-link,
@@ -2854,16 +2855,17 @@ body.modal-open {
 }
 
 .contact-form-wrapper {
-    background-color: rgba(255, 255, 255, 0.03);
+    background-color: var(--color-white);
     padding: 3rem;
     border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 20px 40px rgba(2, 38, 103, 0.15);
 }
 
 .contact-section .form-group input,
 .contact-section .form-group textarea {
-    color: var(--color-white);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    color: var(--color-primary);
+    border-bottom: 1px solid rgba(2, 38, 103, 0.2);
     width: 100%;
     padding: 1.25rem 1rem 0.5rem;
     background: transparent;
@@ -2873,6 +2875,13 @@ body.modal-open {
     font-family: var(--font-sans);
     font-size: 1rem;
     border-radius: 0;
+    transition: all 0.3s ease;
+}
+
+.contact-section .form-group input:focus,
+.contact-section .form-group textarea:focus {
+    border-bottom-color: var(--color-accent);
+    outline: none;
 }
 
 .contact-section .form-group {
@@ -2886,29 +2895,27 @@ body.modal-open {
     top: 50%;
     transform: translateY(-50%);
     font-family: var(--font-sans);
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(2, 38, 103, 0.6);
     pointer-events: none;
     transition: all 0.3s ease;
 }
 
-.contact-section .form-group textarea~label {
+.contact-section .form-group textarea + label {
     top: 1.5rem;
 }
 
-.contact-section .form-group input:focus,
-.contact-section .form-group textarea:focus {
-    border-bottom-color: var(--color-white);
-    outline: none;
-}
-
-.contact-section .form-group input:focus~label,
-.contact-section .form-group input:not(:placeholder-shown)~label,
-.contact-section .form-group textarea:focus~label,
-.contact-section .form-group textarea:not(:placeholder-shown)~label {
+/* Floating Label Effects */
+.contact-section .form-group input:focus + label,
+.contact-section .form-group input:not(:placeholder-shown) + label,
+.contact-section .form-group textarea:focus + label,
+.contact-section .form-group textarea:not(:placeholder-shown) + label {
     top: 0;
     font-size: 0.75rem;
     color: var(--color-accent);
+    font-weight: 500;
 }
+
+
 
 /* ==========================================================================
    17. Media Queries

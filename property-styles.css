@@ -7,6 +7,7 @@
     background-color: var(--color-white);
     color: var(--color-text);
     font-family: var(--font-sans);
+    padding-top: 120px;
 }
 
 .property-container {
@@ -90,7 +91,7 @@ main {
 }
 .editorial-meta {
     font-size: 1.1rem;
-    color: var(--color-sage);
+    color: var(--color-primary);
     font-weight: 500;
     line-height: 1.6;
     letter-spacing: 0.02em;
@@ -197,13 +198,13 @@ main {
     padding-right: 48px;
     border-right: 1px solid var(--color-sage);
 }
-.editorial-spec-item:nth-last-child(2) {
+.editorial-spec-item:last-child {
     border-right: none;
     padding-right: 0;
 }
 .editorial-spec-item span {
     font-size: 0.85rem;
-    color: var(--color-secondary);
+    color: var(--color-white);
     text-transform: uppercase;
     letter-spacing: 0.05em;
     margin-bottom: 8px;
@@ -211,7 +212,7 @@ main {
 .editorial-spec-item strong {
     font-family: var(--font-serif);
     font-size: 1.75rem;
-    color: var(--color-primary);
+    color: var(--color-white);
     font-weight: 500;
 }
 .editorial-spec-cta {
@@ -554,20 +555,47 @@ main {
 
 /* 13. LEAD GEN CTA */
 .final-cta-banner {
-    background: var(--color-neutral);
-    border-radius: var(--radius-lg, 12px);
-    padding: 60px 40px;
+    background: linear-gradient(135deg, var(--color-primary) 0%, #031433 100%);
+    border-radius: 16px;
+    padding: 80px 40px;
     text-align: center;
-    color: var(--color-primary);
+    color: var(--color-white);
+    box-shadow: 0 20px 40px rgba(2, 38, 103, 0.2);
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.final-cta-banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--color-accent);
+}
+.final-cta-banner::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(5, 143, 3, 0.15) 0%, rgba(5, 143, 3, 0) 70%);
+    border-radius: 50%;
+    pointer-events: none;
 }
 .final-cta-banner h2 {
     font-family: var(--font-serif);
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin: 0 0 16px 0;
+    color: var(--color-white);
 }
 .final-cta-banner p {
-    font-size: 1.15rem;
-    margin: 0 0 32px 0;
+    font-size: 1.2rem;
+    margin: 0 auto 40px auto;
+    color: rgba(255, 255, 255, 0.85);
+    max-width: 600px;
 }
 
 /* 14. STICKY MOBILE CTA */

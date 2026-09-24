@@ -28,11 +28,11 @@ files.forEach(file => {
     
     // Replace the one with specific inline styles (blogs pages)
     let newContent = content.replace(/<button class="pill-btn open-popup" style="background: var\(--color-primary\); color: var\(--color-white\)">Register Your Interest<\/button>/g, 
-        '<button class="pill-btn open-popup" style="background-color: var(--color-accent); color: var(--color-primary);">Register Your Interest</button>');
+        '<button class="pill-btn open-popup" style="background-color: var(--color-accent); color: var(--color-white);">Register Your Interest</button>');
         
     // Replace the one in luxe-heaven-villas header
     newContent = newContent.replace(/<button class="pill-btn open-popup" onclick="document.getElementById\('enquiry-popup'\).showModal\(\)">Register Your Interest<\/button>/g, 
-        '<button class="pill-btn open-popup" style="background-color: var(--color-accent); color: var(--color-primary);" onclick="document.getElementById(\'enquiry-popup\').showModal()">Register Your Interest</button>');
+        '<button class="pill-btn open-popup" style="background-color: var(--color-accent); color: var(--color-white);" onclick="document.getElementById(\'enquiry-popup\').showModal()">Register Your Interest</button>');
 
     if (newContent !== content) {
         fs.writeFileSync(file, newContent, 'utf8');
